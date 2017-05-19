@@ -1,0 +1,125 @@
+.search-page {
+    background: #ffffff;
+    border: none;
+    min-height: 300px;
+    -webkit-border-radius: 0 0 11px 11px;
+    -moz-border-radius: 0 0 11px 11px;
+    border-radius: 0 0 11px 11px;
+}
+.search-page .wp-block.property.list {
+    margin-bottom: 15px !important;
+}
+.search-page .wp-block {
+    margin: 0 0 15px 0;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    position: relative;
+    cursor: default;
+    border-radius: 2px;
+}
+.search-page .wp-block.property.list {
+    padding: 15px 15px 0 15px;
+}
+.search-page .wp-block.property.list {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+.search-page .wp-block .wp-block-body {
+    padding: 15px;
+}
+.search-page .wp-block.property.list .wp-block-img {
+    display: table-cell;
+    width: 250px;
+}
+.search-page .wp-block.property.list .wp-block-img img {
+    width: 100%;
+}
+.search-page .wp-block.property.list .wp-block-content .content-title {
+    font-size: 20px;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+.search-page .wp-block.property.list .wp-block-body .wp-block-content {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 15px;
+}
+.search-page .wp-block.property.list .wp-block-content .description {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0eded;
+}
+.search-page .wp-block.property.list .wp-block-footer ul.aux-info {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    background: #fcfcfc;
+    border-top: 1px solid #e0eded;
+}
+.search-page .wp-block.property.list .wp-block-footer ul.aux-info li {
+    display: table-cell;
+    padding: 10px 15px;
+    vertical-align: middle;
+    border-right: 1px solid #e0eded;
+}
+.search-page .ribbon.base {
+    background: #3498db;
+    color: #fff;
+    border-right: 5px solid #8bc4ea;
+}
+.search-page .ribbon {
+    position: absolute;
+    top: 20px;
+    right: -5px;
+    padding: 15px;
+}
+.search-page .base {
+    background: #3498db;
+    color: #fff !important;
+}
+.search-page .ribbon:before, .ribbon:after {
+    content: '';
+    position: absolute;
+    left: -9px;
+    border-left: 10px solid transparent;
+}
+.search-page .ribbon:before {
+    top: 0;
+}
+.search-page .ribbon.base:before {
+    border-top: 27px solid #3498db;
+}
+.search-page .ribbon.base:after {
+    border-bottom: 27px solid #3498db;
+}
+.search-page .ribbon:after {
+    bottom: 0;
+}
+#slider_date .noUi-handle:before, #slider_date .noUi-handle:after {
+    display: none;
+}
+
+#slider_date .noUi-handle[data-handle="1"] {
+    /*left: -90px;*/
+}
+.row.row-not-margin {
+    margin: 0;
+}
+
+
+
+.col-md-not-padding {
+    padding: 0;
+}
+
+.filter-container-bg {
+    background: url('/images/enciclopedy_bg.png') #00ad83;
+    padding-bottom: 60px;
+}
+.filter-serializer {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}

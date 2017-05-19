@@ -1,0 +1,50 @@
+.backend-generate-slug, .backend-generate-keywords {
+    padding:0;
+    line-height: 1;
+    color: white;
+}
+.backend-generate-slug-addon,.backend-generate-keywords-addon {
+    background-color: #337ab7 !important;
+}
+.article-form .panel-info {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+.btn-top-margin {
+    margin-top: -6px;
+}
+.article-form .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+.article_content {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    height: auto;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+}
+.article_content_buttons {
+    position: absolute;
+    right: 0;
+    z-index: 150;
+    top: 0;
+}
+.article_content_buttons .admin_btn {
+    display: block;
+}
+.article-create .select2-search__field, .article-update .select2-search__field {
+    border: none !important;
+}
+.translate_body .form-group {
+    word-wrap: break-word;
+    padding: 0 15px;
+}
+.translate-row {
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+}
