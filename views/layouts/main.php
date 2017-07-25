@@ -24,7 +24,13 @@ rmrevin\yii\fontawesome\AssetBundle::register($this);
 </head>
 <body class="not-front">
 <?php $this->beginBody() ?>
-
+<!--LiveInternet counter--><script type="text/javascript">
+    new Image().src = "//counter.yadro.ru/hit?r"+
+    escape(document.referrer)+((typeof(screen)=="undefined")?"":
+    ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+    screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+    ";h"+escape(document.title.substring(0,80))+
+    ";"+Math.random();</script><!--/LiveInternet-->
 <div class="wrap">
 
     <div class="content_body">
