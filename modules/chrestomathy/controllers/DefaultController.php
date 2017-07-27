@@ -2,6 +2,7 @@
 
 namespace app\modules\chrestomathy\controllers;
 
+use app\backend\modules\reader\models\ChrestomathyThemes;
 use yii\web\Controller;
 
 /**
@@ -15,6 +16,10 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $content = ChrestomathyThemes::find()->with('articles')->all();
+
+        return $this->render('index', [
+            'model' => $content
+        ]);
     }
 }

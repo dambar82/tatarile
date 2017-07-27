@@ -19,7 +19,11 @@ class Module extends \yii\base\Module
     {
         parent::init();
 
-        // custom initialization code goes here
+        $this->modules = [
+            'reader' => [
+                'class' => 'app\backend\modules\reader\Module',
+            ],
+        ];
     }
 
     public function behaviors()

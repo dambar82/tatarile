@@ -1,9 +1,9 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
-function x() {
-    return "dasdasdasd";
-}
+//function x() {
+//    return "dasdasdasd";
+//}
 $config = [
     'id' => 'basic',
 	'language'=>'ru-RU',
