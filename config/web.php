@@ -15,6 +15,9 @@ $config = [
 			'layoutPath' => '@app/modules/admin/views/layouts',
 			'layout' => 'main'
         ],
+        'chrestomathy' => [
+            'class' => 'app\modules\chrestomathy\Module',
+        ],
         'file' => [
             'class' => 'app\modules\file\Module',
         ],
