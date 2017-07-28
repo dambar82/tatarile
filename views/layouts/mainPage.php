@@ -158,6 +158,7 @@ for($i = 0; $i<3; $i++) {
                         <div class="entry_text">
                             <div class="entry_text_content">
                                 <p><?=Yii::t('app','Description of the encyclopedia')?></p>
+                                <a class="btn btn-default" href="http://tatarile.tatar/encyclopedia"><?=Yii::t('app', 'Encyclopedia')?></a>
                             </div>
                         </div>
                     </div>
@@ -201,6 +202,7 @@ for($i = 0; $i<3; $i++) {
                         <div class="entry_text">
                             <div class="entry_text_content">
                                 <p><?=Yii::t('app','Description of the library')?></p>
+                                <a class="btn btn-default" href="http://chrestomathy.tatarile.tatar"><?=Yii::t('app', 'Chrestomathy')?></a>
                             </div>
                         </div>
                     </div>
