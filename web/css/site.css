@@ -2408,7 +2408,7 @@ h2, .h2 {
     margin-top: 0;
 }
 .right-sidebar .dop_widget.interesting_stuff .interesting_link a::before {
-    content: "•";
+    content: "\2022";
     position: absolute;
     top: 10px;
     left: 0;
