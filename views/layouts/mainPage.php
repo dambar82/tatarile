@@ -164,50 +164,50 @@ for($i = 0; $i<3; $i++) {
                     </div>
                 </div>
             </div>
-            <div class="view_row entry_library">
-                <div class="view_row_content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <ul id="scene_1">
-                                <li class="layer" data-depth="0.10"><img src="/images/entry/i16.png" style="width: 73%;"></li>
-                                <li class="layer" data-depth="1"><img src="/images/entry/i1.png" class="swing swing_1" style="top: 15%; left: 5%; width: 100px;"></li>
-                                <li class="layer" data-depth="0.6"><img src="/images/entry/i2.png" class="swing swing_2" style="top: 43%; left: 5%; width: 100px;"></li>
-                                <li class="layer" data-depth="0.4"><img src="/images/entry/i3.png" class="swing swing_3" style="top: 27%; left: 25%; width: 70px;"></li>
-                                <li class="layer" data-depth="1"><img src="/images/entry/i4.png" class="swing swing_4" style="top: 15%; left: 45%; width: 85px;"></li>
-                                <li class="layer" data-depth="1"><img src="/images/entry/i5.png" class="swing swing_5" style="top: 5%; left: 61%; width: 54px;"></li>
-                                <li class="layer" data-depth="0.8"><img src="/images/entry/i6.png" class="swing swing_6" style="top: 22%; left: 70%; width: 85px;"></li>
-                                <li class="layer" data-depth="0.2"><img src="/images/entry/i7.png" class="swing swing_7" style="top: 4%; left: 80%; width: 55px;"></li>
-                                <li class="layer" data-depth="0.5"><img src="/images/entry/i8.png" class="swing swing_8" style="top: 43%; left: 84%; width: 70px;"></li>
-                                <li class="layer" data-depth="0.7"><img src="/images/entry/i9.png" class="swing swing_9" style="top: 50%; left: 67%; width: 45px;"></li>
-                                <li class="layer" data-depth="0.9"><img src="/images/entry/i10.png" class="swing swing_10" style="top: 60%; left: 77%; width: 65px;"></li>
-                                <li class="layer" data-depth="0.1"><img src="/images/entry/i11.png" class="swing swing_11" style="top: 73%; left: 88%; width: 62px;"></li>
-                                <li class="layer" data-depth="0.8"><img src="/images/entry/im1.png" class="swing swing_7" style="top: 26%; left: 15%; width: 23px;"></li>
-                                <li class="layer" data-depth="0.6"><img src="/images/entry/im1.png" class="swing swing_2" style="top: 50%; left: 27%; width: 35px;"></li>
-                                <li class="layer" data-depth="0.5"><img src="/images/entry/im2.png" class="swing swing_6" style="top: 29%; left: 0%; width: 35px;"></li>
-                                <li class="layer" data-depth="0.3"><img src="/images/entry/im2.png" class="swing swing_4" style="top: 44%; left: 35%; width: 35px;"></li>
-                                <li class="layer" data-depth="0.7"><img src="/images/entry/im3.png" class="swing swing_8" style="top: 51%; left: 13%; width: 35px;"></li>
-                                <li class="layer" data-depth="1"><img src="/images/entry/im3.png" class="swing swing_9" style="top: 6%; left: 26%; width: 35px;"></li>
-                                <li class="layer" data-depth="0.5"><img src="/images/entry/im4.png" class="swing swing_1" style="top: 57%; left: 4%; width: 35px;"></li>
-                                <li class="layer" data-depth="0.4"><img src="/images/entry/im4.png" class="swing swing_2" style="top: 55%; left: 15%; width: 35px;"></li>
-                                <li class="layer" data-depth="0.20"><img src="/images/entry/i12.png" style="bottom: 5%; left: 21%; position: absolute; width: 18.5%;"></li>
-                                <li class="layer" data-depth="0.25"><img src="/images/entry/i13.png" style="bottom: 5%; left: 47%; position: absolute; width: 25%;"></li>
-                                <li class="layer" data-depth="0.25"><img src="/images/entry/i15.png" style="bottom: 18%; left: 49%; position: absolute; width: 23%;"></li>
-                                <li class="layer" data-depth="0.30"><img src="/images/entry/i14.png" style="bottom: 17%; left: 34%; position: absolute; width: 16%;"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="entry_point_footer">
-                    <div class="container-fluid">
-                        <div class="entry_text">
-                            <div class="entry_text_content">
-                                <p><?=Yii::t('app','Description of the library')?></p>
-                                <a class="btn btn-default" href="http://chrestomathy.tatarile.tatar"><?=Yii::t('app', 'Chrestomathy')?></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="view_row entry_library">-->
+<!--                <div class="view_row_content">-->
+<!--                    <div class="container-fluid">-->
+<!--                        <div class="row">-->
+<!--                            <ul id="scene_1">-->
+<!--                                <li class="layer" data-depth="0.10"><img src="/images/entry/i16.png" style="width: 73%;"></li>-->
+<!--                                <li class="layer" data-depth="1"><img src="/images/entry/i1.png" class="swing swing_1" style="top: 15%; left: 5%; width: 100px;"></li>-->
+<!--                                <li class="layer" data-depth="0.6"><img src="/images/entry/i2.png" class="swing swing_2" style="top: 43%; left: 5%; width: 100px;"></li>-->
+<!--                                <li class="layer" data-depth="0.4"><img src="/images/entry/i3.png" class="swing swing_3" style="top: 27%; left: 25%; width: 70px;"></li>-->
+<!--                                <li class="layer" data-depth="1"><img src="/images/entry/i4.png" class="swing swing_4" style="top: 15%; left: 45%; width: 85px;"></li>-->
+<!--                                <li class="layer" data-depth="1"><img src="/images/entry/i5.png" class="swing swing_5" style="top: 5%; left: 61%; width: 54px;"></li>-->
+<!--                                <li class="layer" data-depth="0.8"><img src="/images/entry/i6.png" class="swing swing_6" style="top: 22%; left: 70%; width: 85px;"></li>-->
+<!--                                <li class="layer" data-depth="0.2"><img src="/images/entry/i7.png" class="swing swing_7" style="top: 4%; left: 80%; width: 55px;"></li>-->
+<!--                                <li class="layer" data-depth="0.5"><img src="/images/entry/i8.png" class="swing swing_8" style="top: 43%; left: 84%; width: 70px;"></li>-->
+<!--                                <li class="layer" data-depth="0.7"><img src="/images/entry/i9.png" class="swing swing_9" style="top: 50%; left: 67%; width: 45px;"></li>-->
+<!--                                <li class="layer" data-depth="0.9"><img src="/images/entry/i10.png" class="swing swing_10" style="top: 60%; left: 77%; width: 65px;"></li>-->
+<!--                                <li class="layer" data-depth="0.1"><img src="/images/entry/i11.png" class="swing swing_11" style="top: 73%; left: 88%; width: 62px;"></li>-->
+<!--                                <li class="layer" data-depth="0.8"><img src="/images/entry/im1.png" class="swing swing_7" style="top: 26%; left: 15%; width: 23px;"></li>-->
+<!--                                <li class="layer" data-depth="0.6"><img src="/images/entry/im1.png" class="swing swing_2" style="top: 50%; left: 27%; width: 35px;"></li>-->
+<!--                                <li class="layer" data-depth="0.5"><img src="/images/entry/im2.png" class="swing swing_6" style="top: 29%; left: 0%; width: 35px;"></li>-->
+<!--                                <li class="layer" data-depth="0.3"><img src="/images/entry/im2.png" class="swing swing_4" style="top: 44%; left: 35%; width: 35px;"></li>-->
+<!--                                <li class="layer" data-depth="0.7"><img src="/images/entry/im3.png" class="swing swing_8" style="top: 51%; left: 13%; width: 35px;"></li>-->
+<!--                                <li class="layer" data-depth="1"><img src="/images/entry/im3.png" class="swing swing_9" style="top: 6%; left: 26%; width: 35px;"></li>-->
+<!--                                <li class="layer" data-depth="0.5"><img src="/images/entry/im4.png" class="swing swing_1" style="top: 57%; left: 4%; width: 35px;"></li>-->
+<!--                                <li class="layer" data-depth="0.4"><img src="/images/entry/im4.png" class="swing swing_2" style="top: 55%; left: 15%; width: 35px;"></li>-->
+<!--                                <li class="layer" data-depth="0.20"><img src="/images/entry/i12.png" style="bottom: 5%; left: 21%; position: absolute; width: 18.5%;"></li>-->
+<!--                                <li class="layer" data-depth="0.25"><img src="/images/entry/i13.png" style="bottom: 5%; left: 47%; position: absolute; width: 25%;"></li>-->
+<!--                                <li class="layer" data-depth="0.25"><img src="/images/entry/i15.png" style="bottom: 18%; left: 49%; position: absolute; width: 23%;"></li>-->
+<!--                                <li class="layer" data-depth="0.30"><img src="/images/entry/i14.png" style="bottom: 17%; left: 34%; position: absolute; width: 16%;"></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="entry_point_footer">-->
+<!--                    <div class="container-fluid">-->
+<!--                        <div class="entry_text">-->
+<!--                            <div class="entry_text_content">-->
+<!--                                <p>--><?//=Yii::t('app','Description of the library')?><!--</p>-->
+<!--                                <a class="btn btn-default" href="http://chrestomathy.tatarile.tatar">--><?//=Yii::t('app', 'Chrestomathy')?><!--</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
         <div class="partners">
             <div class="container-fluid">
