@@ -110,10 +110,7 @@ $site = Yii::$app->params['siteURL'].\app\components\UrlHelper::createEntityUrl(
     <div class="related_entity_block do-not-print">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 col-lg-3">
-
-                </div>
-                <div class="col-md-6 col-lg-6 related_entity">
+                <div class="col-md-10 col-lg-6 col-md-push-1 col-lg-push-3 related_entity">
                         <div class="block_h2">
                             <h2><?=Yii::t('app', 'Related material')?></h2>
                         </div>
@@ -128,9 +125,6 @@ $site = Yii::$app->params['siteURL'].\app\components\UrlHelper::createEntityUrl(
                             }
                             ?>
                         </div>
-                </div>
-                <div class="col-md-3 col-lg-3">
-
                 </div>
             </div>
         </div>
@@ -176,7 +170,7 @@ $site = Yii::$app->params['siteURL'].\app\components\UrlHelper::createEntityUrl(
                 }
             },
             {
-                breakpoint: 1200,
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -184,22 +178,12 @@ $site = Yii::$app->params['siteURL'].\app\components\UrlHelper::createEntityUrl(
                 }
             },
             {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-                {
-                breakpoint: 480,
+                breakpoint: 530,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
     $(document).ready(function(e) {
