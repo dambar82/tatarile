@@ -8,6 +8,8 @@ IndexIgnore */*
 
 RewriteEngine on
 
+RewriteRule ^sitemap.xml$ files/sitemap.xml$1 [L]
+
 # if a directory or a file exists, use it directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
