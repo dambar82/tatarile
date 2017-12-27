@@ -90,6 +90,14 @@ class EntityController extends Controller
 
         $this->view->registerMetaTag(['property' => 'og:url','content' => Yii::$app->params['siteURL'].\app\components\UrlHelper::createEntityUrl($model->id)]);
 
+
+        $langs = Lang::find()->all();
+
+        foreach ($langs as $lang) {
+            Yii::$app->view->registerLinkTag(['rel' => 'alternate', 'hreflang' => $lang->url, 'href' => Url::base(true).'/'.$lang->url.'/encyclopedia/'.$model->slug]);
+        }
+
+
         if ($model->entity_type_id == 1) {
             $this->viewFile = '_article';
             $content = $this->articleContent($id);
@@ -104,6 +112,7 @@ class EntityController extends Controller
             $this->viewFile = '_pdf';
             $content = $this->pdfContent($id);
         }
+
 
 
 
