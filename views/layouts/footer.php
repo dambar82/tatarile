@@ -17,7 +17,10 @@
                         </ul>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-pull-3 col-lg-pull-3 footer_block second_footer">
-                        <p>© <?=Yii::t('app','Project')?> 2016. <?=Yii::t('app','All rights reserved')?></p>
+                        <p>© <?=Yii::t('app','Project')?>
+<!--                            2016. -->
+                            <?= date("Y") ?>.
+                            <?=Yii::t('app','All rights reserved')?></p>
                         <p><small>
                             <?=Yii::t('app','Tatarmultfilm')?><br>
                             info@tdpress.ru,
