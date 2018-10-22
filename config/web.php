@@ -64,6 +64,15 @@ $config = [
                 \webvimark\modules\UserManagement\models\UserVisitLog::newVisitor($event->identity->id);
             }
 		],
+        'view' => [
+            'theme' => [
+//                'basePath' => '@app/themes/basic',
+//                'baseUrl' => '@web/themes/basic',
+                'pathMap' => [
+                    '@app/vendor/webvimark/module-user-management/views/auth' => '@app/views/auth',
+                ],
+            ],
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

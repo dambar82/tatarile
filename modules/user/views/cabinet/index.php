@@ -1,7 +1,7 @@
 <?php
 use app\backend\models\EntityType;
 
-$this->title = 'Личный кабинет';
+$this->title = Yii::t('app','Cabinet');
 $entity_type = \yii\helpers\ArrayHelper::map(EntityType::find()->all(),'id','entity_type');
 
 if (empty($user_info->user_id)) {
@@ -45,7 +45,7 @@ if (empty($user_info->user_id)) {
               <div class="main-content">
                   <div class="row">
                       <div class="block_h2">
-                          <h2>Профиль</h2>
+                          <h2><?= Yii::t('app','User cabinet') ?></h2>
                       </div>
                       <div class="col-xs-3 user_inf_photo">
                           <img src="<?= Yii::getAlias("@web/files/avatars/").$user_info->file_name ?>" style="width: 100%; height: auto;" >
@@ -87,7 +87,9 @@ if (empty($user_info->user_id)) {
                                       </div>
                                       <?php } ?>
                                       <div class="user_inf_edit">
-                                          <a href="<?php echo Yii::$app->urlManager->createUrl('/user/cabinet/update', array('lang_id'=>\app\models\Lang::getCurrent()->id)) ?>">Изменить</a>
+                                          <a href="<?php echo Yii::$app->urlManager->createUrl('/user/cabinet/update', array('lang_id'=>\app\models\Lang::getCurrent()->id)) ?>">
+                                              <?= \Yii::t('app', 'Edit') ?>
+                                          </a>
                                       </div>
                                   </div>
                               </div>
@@ -119,8 +121,6 @@ if (empty($user_info->user_id)) {
     </div>
 
 
-
-      </div>
     </div>
 <?php
 }
