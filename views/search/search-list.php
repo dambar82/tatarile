@@ -3,21 +3,41 @@ if(!$pagination) {
 ?>
 
 <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-3 col-lg-3 col-md-not-padding white-bg-sidebar"></div>
     <div class="col-md-3 col-lg-3 col-md-not-padding left-sidebar">
         <div class="sidebar-content">
-            <form method="get" id="filter" class="filter-serializer sidebar_row" data-filter-page="1">
+            <form method="get" id="filter" class="filter-serializer" data-filter-page="1">
                 <div class="hidden-md hidden-lg filter-config">
                     <div class="filter-config-cont">
                         <a class="filter-config-btn" href="javascipt://"></a>
                     </div>
                 </div>
-                <div class="hidden-xs hidden-sm sidebar_row_title">
-                    <span><?=Yii::t('app','Filter')?></span>
+                <div class="hidden-xs hidden-sm sidebar_filter_title">
+                    <span><?=Yii::t('app','Library')?></span>
                 </div>
                 <div class="sidebar_row_content">
                     <div class="filter_field filter_razdel">
                         <div class="filter_title"><label for="filter_razdel"><?=Yii::t('app','Section')?></label></div>
                         <div class="field_items">
+                        
+                            <?php
+                              foreach ($parentSubjects as $parentSubjectID => $parentSubjectTitle) {
+                                  ?>
+                                    <div class="field_item radio"> <!-- radio, radio-2 -->
+                                        <label for="category_<?= $parentSubjectID ?>">
+                                            <input type="radio" id="category_<?= $parentSubjectID ?>" name="category_id" value="<?=$parentSubjectID?>" class="hidden"<?php if($category_id == $parentSubjectID) echo ' checked';?>>
+                                            <span><?=$parentSubjectTitle?></span>
+                                        </label>
+                                    </div>
+                                    
+                                  <?php
+                              }
+                              ?>
+
+
+
+
                             <select class="form-control updater-select" name="category_id" style="display: none;">
                               <option value="0"<?php if($category_id == 0) echo ' selected';?>><?=Yii::t('app','Choose section')?></option>
                               <?php
@@ -51,7 +71,7 @@ if(!$pagination) {
                                     ?>
                                     <div class="field_item checkbox">
                                         <label>
-                                            <input type="checkbox" id="type-1" name="subcategories[<?=$subcatID?>]" value="1" <?php if(isset($selectedSubcat[$subcatID])) echo 'checked';?>>
+                                            <input type="checkbox" id="type-<?=$subcatID?>" name="subcategories[<?=$subcatID?>]" value="1" <?php if(isset($selectedSubcat[$subcatID])) echo 'checked';?>>
                                             <span><?=$subcatTitle?></span></label>
                                     </div>
                                     <?php
@@ -73,7 +93,7 @@ if(!$pagination) {
                                     ?>
                                     <div class="field_item checkbox checkbox_<?= $entity_type->entity_type ?>">
                                         <label>
-                                            <input type="checkbox" id="type-1"
+                                            <input type="checkbox" id="type-<?= $entity_type->id ?>"
                                                    name="entity_type[<?= $entity_type->id ?>]"
                                                    value="1" <?php if (isset($selected_types[$entity_type->id])) echo 'checked'; ?>>
                                             <span><?= Yii::t('app', $entity_type->entity_type) ?></span></label>
@@ -198,6 +218,7 @@ if(!$pagination) {
                 ])?>
             </div>
         </div>
+        </div>
 </div>
 <?php }
 ?>
@@ -272,6 +293,8 @@ elseif(!$pagination) { ?>
                 'entitiesPop' => $entitiesPop
             ])?>
         </div>
+    </div>
+    </div>
     </div>
 <?php }
 ?>

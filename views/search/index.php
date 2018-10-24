@@ -23,12 +23,8 @@ for($i = 0; $i<3; $i++) {
     <div class="container-fluid">
         <div class="row">
             <div class="top_filter-content">
-                <div class="col-sm-2 col-md-3 col-lg-3 hidden-xs tematic-img-block">
-                    <div class="row_content">
-                        <div class="top_filter_tematic">
-                            <img class="img-responsive img-top-filter" src="/images/tematik_search_1.jpg">
-                        </div>
-                    </div>
+                <div class="col-sm-2 col-md-3 col-lg-3 hidden-xs hidden-sm tematic-img-block">
+
                 </div>
 
                 <div class="col-xs-12 col-sm-10 col-md-9 col-lg-6 filter_search">

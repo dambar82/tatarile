@@ -44,7 +44,7 @@ if($lang->id != 2) {
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-sm-push-6 col-lg-push-6 header_right_box">
+                <div class="col-xs-12 col-md-3 col-lg-3 col-md-push-6 col-lg-push-6 header_right_box">
                     <div class="row_content">
                         <div class="inside-row_content">
                             <?php if (Yii::$app->user->isGuest) { ?>
@@ -57,11 +57,16 @@ if($lang->id != 2) {
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-pull-3 col-lg-pull-3 header_middle_box">
+                <div class="col-xs-12 col-md-6 col-lg-6 col-md-pull-3 col-lg-pull-3 header_middle_box">
                     <div class="row_content">
                         <div class="inside-row_content">
                             <ul class="nav nav-pills main_menu">
-                                <li class="<?php if($pathRoot == 'encyclopedia') echo 'active';?>"><a href="/<?=\app\models\Lang::getCurrent()->url?>/encyclopedia"><?= Yii::t('app','School electronic library'); ?></a></li>
+                                <li class="<?php if($pathRoot == 'encyclopedia') echo 'active';?>">
+                                    <a href="/<?=\app\models\Lang::getCurrent()->url?>/encyclopedia"><small>ШКОЛЬНАЯ ЭЛЕКТРОННАЯ</small><?= Yii::t('app','Library'); ?></a>
+                                </li>
+                                <li>
+                                    <a href=""><small>ӘДӘБИ УКУ БУЕНЧА ЭЛЕКТРОН</small>ХРЕСТОМАТИЯ</a>
+                                </li>
                             </ul>                            
                         </div>
                     </div>

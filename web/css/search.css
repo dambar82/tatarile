@@ -5,14 +5,15 @@
     -webkit-border-radius: 0 0 11px 11px;
     -moz-border-radius: 0 0 11px 11px;
     border-radius: 0 0 11px 11px;
+    margin-bottom: 70px;
 }
 .search-page .wp-block.property.list {
     margin-bottom: 15px !important;
 }
 .search-page .wp-block {
     margin: 0 0 15px 0;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
     position: relative;
     cursor: default;
     border-radius: 2px;
@@ -79,8 +80,9 @@
     background: #3498db;
     color: #fff !important;
 }
-.search-page .ribbon:before, .ribbon:after {
-    content: '';
+.search-page .ribbon:before,
+.ribbon:after {
+    content: "";
     position: absolute;
     left: -9px;
     border-left: 10px solid transparent;
@@ -97,7 +99,8 @@
 .search-page .ribbon:after {
     bottom: 0;
 }
-#slider_date .noUi-handle:before, #slider_date .noUi-handle:after {
+#slider_date .noUi-handle:before,
+#slider_date .noUi-handle:after {
     display: none;
 }
 
@@ -108,15 +111,12 @@
     margin: 0;
 }
 
-
-
 .col-md-not-padding {
-    padding: 0;
+    /* padding: 0; */
 }
 
 .filter-container-bg {
-    background: url('/images/enciclopedy_bg.png') #00ad83;
-    padding-bottom: 60px;
+    background: url("/images/enciclopedy_bg.png") #00ad83;
 }
 .filter-serializer {
     user-select: none;

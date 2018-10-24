@@ -27,3 +27,5 @@ phpunit.phar
 
 /config/db-local.php
 /messages
+
+/node_modules
