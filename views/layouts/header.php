@@ -62,11 +62,14 @@ if($lang->id != 2) {
                         <div class="inside-row_content">
                             <ul class="nav nav-pills main_menu">
                                 <li class="<?php if($pathRoot == 'encyclopedia') echo 'active';?>">
-                                    <a href="/<?=\app\models\Lang::getCurrent()->url?>/encyclopedia?category_id=2"><small>ШКОЛЬНАЯ ЭЛЕКТРОННАЯ</small><?= Yii::t('app','Library'); ?></a>
+                                    <a href="/<?=\app\models\Lang::getCurrent()->url?>/encyclopedia?category_id=2"><small><?= Yii::t('app','ШКОЛЬНАЯ ЭЛЕКТРОННАЯ'); ?></small><?= Yii::t('app','Library'); ?></a>
                                 </li>
-                                <li>
-                                    <a href=""><small>ӘДӘБИ УКУ БУЕНЧА ЭЛЕКТРОН</small>ХРЕСТОМАТИЯ</a>
-                                </li>
+
+                                <?php if ($cur_lang->id != 2): ?>
+                                    <li>
+                                        <a href="http://chrestomathy.tatarile.tatar/info"><small>ӘДӘБИ УКУ БУЕНЧА ЭЛЕКТРОН</small>ХРЕСТОМАТИЯ</a>
+                                    </li>
+                                <?php endif; ?>
                             </ul>                            
                         </div>
                     </div>
