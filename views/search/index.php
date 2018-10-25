@@ -269,15 +269,8 @@ $script = <<< JS
                 obj.attr('checked',null);
             sendFilter();
         });
-        filterContainer.on('change','.updater-select input[type="radio"]',function(e) {
-            var obj = $(this);
-            // $('.updater-select').find("input").attr('checked', false);
-            // obj.attr('checked','checked');
-            // obj.prop('checked', true);
-            
-            sendFilter();
-            
-            
+        filterContainer.on('change','.updater-select input[type="radio"]',function(e) {      
+            sendFilter();            
         });
         filterContainer.on('change','#alphabet-filter input[type="checkbox"]',function(e) {
             var obj = $(this);
