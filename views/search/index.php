@@ -107,7 +107,8 @@ $script = <<< JS
         var filterSerialize = "";
         var filters = $('.filter-serializer').not('.ignored');
         filters.each(function() {
-            var ser = $(this).find("*").not('.ignored, input[name="q"], *[name="category_id"]').serialize();
+            var ser = $(this).find("*").not('.ignored, input[name="q"], *[name="category_id"]:checked').serialize();
+            
             if(ser.length > 0) {
                if(filterSerialize.length != 0)
                    filterSerialize +='&';
@@ -121,7 +122,7 @@ $script = <<< JS
                 $('#alphabet-filter input[type="checkbox"]').attr('checked',null);
 
             }
-            var cf = $(this).find('*[name="category_id"]');
+            var cf = $(this).find('*[name="category_id"]:checked');
             if(cf.length > 0 && parseInt(cf.val()) > 0) {
                 if(filterSerialize.length != 0)
                    filterSerialize +='&';
@@ -244,6 +245,7 @@ $script = <<< JS
     $(document).ready(function(e) {
         var filterContainer = $('.filter_container');
         var searchPageDyn = $('#filter-dynamic-part');
+        
         sliderInit();
         $(window).on('popstate', function(e) {
             var urlSplit = window.location.href.split('?');
@@ -259,7 +261,7 @@ $script = <<< JS
             sendFilter(getStr);
         });
         filterInit();
-        filterContainer.on('change','#filter input[type="checkbox"], #filter select.updater-select',function(){
+        filterContainer.on('change','#filter input[type="checkbox"]',function(){
             var obj = $(this);
             if(obj.prop('checked'))
                 obj.attr('checked','checked');
@@ -267,11 +269,15 @@ $script = <<< JS
                 obj.attr('checked',null);
             sendFilter();
         });
-        filterContainer.on('change','#filter #category_id',function(e) {
+        filterContainer.on('change','.updater-select input[type="radio"]',function(e) {
             var obj = $(this);
-            var objs = $('#filter *[name="category_id"]');
-            objs.val(obj.val());
-            objs.change();
+            // $('.updater-select').find("input").attr('checked', false);
+            // obj.attr('checked','checked');
+            // obj.prop('checked', true);
+            
+            sendFilter();
+            
+            
         });
         filterContainer.on('change','#alphabet-filter input[type="checkbox"]',function(e) {
             var obj = $(this);
