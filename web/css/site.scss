@@ -1824,7 +1824,7 @@ h2,
             background: url("/images/filter-checkbox.png") no-repeat 2px 3px;
             display: inline-block;
         }
-        input[checked] + span {
+        input[type="checkbox"]:checked + span {
             background-position: 2px -85px;
         }
         select {
