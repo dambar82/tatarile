@@ -19,45 +19,17 @@ if(!$pagination) {
                 <div class="sidebar_row_content">
                     <div class="filter_field filter_razdel">
                         <div class="filter_title"><label for="filter_razdel"><?=Yii::t('app','Section')?></label></div>
-                        <div class="field_items">
+                        <div class="field_items updater-select">
                         
-                            <?php
-                              foreach ($parentSubjects as $parentSubjectID => $parentSubjectTitle) {
-                                  ?>
-                                    <div class="field_item radio"> <!-- radio, radio-2 -->
-                                        <label for="category_<?= $parentSubjectID ?>">
-                                            <input type="radio" id="category_<?= $parentSubjectID ?>" name="category_id" value="<?=$parentSubjectID?>" class="hidden"<?php if($category_id == $parentSubjectID) echo ' checked';?>>
-                                            <span><?=$parentSubjectTitle?></span>
-                                        </label>
-                                    </div>
-                                    
-                                  <?php
-                              }
-                              ?>
+                            <?php foreach ($parentSubjects as $parentSubjectID => $parentSubjectTitle) : ?>
+                                <div class="field_item radio"> <!-- radio, radio-2 -->
+                                    <label for="category_<?= $parentSubjectID ?>">
+                                        <input type="radio" name="category_id" id="category_<?= $parentSubjectID ?>" value="<?=$parentSubjectID?>" class="hidden"<?php if($parentSubjectID == $category_id) echo ' checked';?>>
+                                        <span><?=$parentSubjectTitle?></span>
+                                    </label>
+                                </div>
+                            <?php endforeach; ?>
 
-
-
-
-                            <select class="form-control updater-select" name="category_id" style="display: none;">
-                              <option value="0"<?php if($category_id == 0) echo ' selected';?>><?=Yii::t('app','Choose section')?></option>
-                              <?php
-                              foreach ($parentSubjects as $parentSubjectID => $parentSubjectTitle) {
-                                  ?>
-                                    <option value="<?=$parentSubjectID?>"<?php if($category_id == $parentSubjectID) echo ' selected';?>><?=$parentSubjectTitle?></option>
-                                  <?php
-                              }
-                              ?>
-                            </select>
-                            <select class="form-control" id="category_id">
-                                <option value="0"<?php if($category_id == 0) echo ' selected';?>><?=Yii::t('app','Choose section')?></option>
-                                <?php
-                                foreach ($parentSubjects as $parentSubjectID => $parentSubjectTitle) {
-                                    ?>
-                                    <option value="<?=$parentSubjectID?>"<?php if($category_id == $parentSubjectID) echo ' selected';?>><?=$parentSubjectTitle?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
                         </div>
                     </div>
                     <?php
