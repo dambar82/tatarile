@@ -32,27 +32,25 @@ if(!$pagination) {
 
                         </div>
                     </div>
-                    <?php
-                    if(count($subcats) > 0) {
-                        ?>
-                        <div class="filter_field filter_temi">
-                            <div class="filter_title"><label for="filter_temi"><?=Yii::t('app','Subject')?></label></div>
-                            <div class="field_items">
-                                <?php
-                                foreach ($subcats as $subcatID => $subcatTitle) {
-                                    ?>
-                                    <div class="field_item checkbox">
-                                        <label>
-                                            <input type="checkbox" id="type-<?=$subcatID?>" name="subcategories[<?=$subcatID?>]" value="1" <?php if(isset($selectedSubcat[$subcatID])) echo 'checked';?>>
-                                            <span><?=$subcatTitle?></span></label>
-                                    </div>
-                                    <?php
-                                }
+
+                    <div class="filter_field filter_temi">
+                        <div class="filter_title"><label for="filter_temi"><?=Yii::t('app','Subject')?></label></div>
+                        <div class="field_items">
+                            <?php
+                            foreach ($subcats as $subcatID => $subcatTitle) {
                                 ?>
-                            </div>
+                                <div class="field_item checkbox">
+                                    <label>
+                                        <input type="checkbox" id="type-<?=$subcatID?>" name="subcategories[<?=$subcatID?>]" value="1" <?php if(isset($selectedSubcat[$subcatID])) echo 'checked';?>>
+                                        <span><?=$subcatTitle?></span></label>
+                                </div>
+                                <?php
+                            }
+                            ?>
                         </div>
+                    </div>
+
                         <?php
-                    }
                     if(count($entity_types) > 1) {
                         ?>
                         <div class="filter_field filter_type">

@@ -61,7 +61,7 @@ if($lang->id != 2) {
                     <div class="row_content">
                         <div class="inside-row_content">
                             <ul class="nav nav-pills main_menu">
-                                <li class="<?php if($pathRoot == 'encyclopedia') echo 'active';?>">
+                                <li>
                                     <a href="/<?=\app\models\Lang::getCurrent()->url?>/encyclopedia?category_id=2"><small><?= Yii::t('app','ШКОЛЬНАЯ ЭЛЕКТРОННАЯ'); ?></small><?= Yii::t('app','Library'); ?></a>
                                 </li>
 
