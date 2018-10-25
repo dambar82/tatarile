@@ -1919,10 +1919,21 @@ h2,
         span {
             padding: 4px 0 4px 43px;
             font-size: 17px;
-            background: url("/images/filter-radio-2.png") no-repeat 2px 3px;
             display: inline-block;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 32px;
+                height: 32px;
+                background: url("/images/filter-radio-2.png") no-repeat 2px 3px;
+            }
         }
-        input:checked + span {
+        input:checked + span::before {
             background-position: 2px -120px;
         }
     }
