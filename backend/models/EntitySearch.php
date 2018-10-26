@@ -6,12 +6,14 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\backend\models\Entity;
+use yii\helpers\VarDumper;
 
 /**
  * EntitySearch represents the model behind the search form about `app\backend\models\Entity`.
  */
 class EntitySearch extends Entity
 {
+    public $categoryName;
     /**
      * @inheritdoc
      */
@@ -20,7 +22,7 @@ class EntitySearch extends Entity
         return [
             [['id', 'date_create', 'date_update', 'status', 'user'], 'integer'],
             [['title'], 'string'],
-            [['corrector'], 'safe'],
+            [['corrector', 'categoryName'], 'safe'],
         ];
     }
 
@@ -64,6 +66,7 @@ class EntitySearch extends Entity
             'date_create' => $this->date_create,
             'date_update' => $this->date_update,
             'status' => $this->status,
+            'category_id' => $this->categoryName,
             'user' => $this->user,
             'entity_type_id'=>$this->entity_type_id,
         ]);
@@ -99,6 +102,7 @@ class EntitySearch extends Entity
             'date_update' => $this->date_update,
             'status' => $this->status,
             'user' => $this->user,
+            'category_id' => $this->category_id,
             'entity_type_id'=>$this->entity_type_id,
             'ready' => 0
         ]);

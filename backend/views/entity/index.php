@@ -24,39 +24,7 @@ $entity = \app\backend\models\EntityType::find()->select('entity_type')->where([
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'title',
-            [
-                'label' => 'Текст',
-                'content'=>function($data){
-                    if ($data->cor == 1) {
-                        return '<span class="label label-success"><i class="glyphicon glyphicon-ok"></i></span>';
-                    }
-                    else {
-                        return '<span class="label label-danger"><i class="fa fa-times"></i></span>';
-                    }
-                },
-            ],
-            [
-                'label' => 'Изображения',
-                'content'=>function($data){
-                    if ($data->image_cor == 1) {
-                        return '<span class="label label-success"><i class="glyphicon glyphicon-ok"></i></span>';
-                    }
-                    else {
-                        return '<span class="label label-danger"><i class="fa fa-times"></i></span>';
-                    }
-                },
-            ],
-            [
-                'label' => 'Общая готовность',
-                'content'=>function($data){
-                    if ($data->ready == 1) {
-                        return '<span class="label label-success"><i class="glyphicon glyphicon-ok"></i></span>';
-                    }
-                    else {
-                        return '<span class="label label-danger"><i class="fa fa-times"></i></span>';
-                    }
-                },
-            ],
+
             [
                 'label' => Yii::t('app','Status'),
                 'content'=>function($data){
@@ -67,6 +35,11 @@ $entity = \app\backend\models\EntityType::find()->select('entity_type')->where([
                         return '<span class="label label-danger">Не опубликован</span>';
                     }
                 },
+            ],
+            [
+                'label' => 'Категория',
+                'attribute' => 'categoryName',
+                'filter' => \app\backend\models\Subject::getAllSubjectsWithLang()
             ],
             [
                 'label' => 'Просмотреть',
