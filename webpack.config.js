@@ -6,7 +6,8 @@ const cssnano = require("cssnano");
 module.exports = {
     mode: "development",
     entry: {
-        site: ["./web/css/site.scss"]
+        site: ["./web/css/site.scss"],
+        site2018: ["./web/css/site2018.scss"]
     },
     output: {
         path: __dirname + "/web/css"
@@ -53,7 +54,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: "site.css" // а тут надо прописать имя css которое вы хотите
+            filename: "[name].css" // а тут надо прописать имя css которое вы хотите
         })
     ]
 };
