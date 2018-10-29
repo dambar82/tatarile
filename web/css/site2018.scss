@@ -66,6 +66,9 @@ body {
     font-family: $fVerdana, $fOpenSans;
     font-size: 16px;
 }
+.wrap {
+    overflow: hidden;
+}
 
 .rslides {
     position: relative;
@@ -124,6 +127,13 @@ h2 {
         position: absolute;
         bottom: 0;
         right: -260px;
+    }
+
+    @media all and (max-width: 1599px) {
+        .block--lang {
+            position: static;
+            float: right;
+        }
     }
 }
 
@@ -236,6 +246,17 @@ ul.main-menu {
                 background: linear-gradient(to right, rgba(229, 149, 38, 1) 0%, rgba(229, 175, 38, 1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e59526', endColorstr='#e5af26', GradientType=1 );
             }
+        }
+    }
+}
+
+.header {
+    @media all and (max-width: 1749px) {
+        .block--logo {
+            position: initial;
+        }
+        .block--main-menu {
+            width: auto;
         }
     }
 }
