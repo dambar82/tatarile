@@ -48,6 +48,23 @@ $config = [
 		],
     ],
     'components' => [
+        'thumb' => [
+            'class' => 'alpiiscky\imagecache\Thumb' ,
+            'cachePath' => '@webroot/cache',
+            'options' => [
+                'placeholder' => [
+                    'type' => \alpiiscky\imagecache\Thumb::THUMBNAIL_INSET,
+                    'backgroundColor' => '#f5f5f5',
+                    'textColor' => '#cdcdcd',
+                    'textSize' => 30,
+                    'text' => 'No image'
+                ],
+                'quality' => 92,
+                'tinyPng' => [
+                    'apiKey' => null
+                ]
+            ]
+        ],
         'assetManager' => [
             'appendTimestamp' => true
         ],
@@ -120,6 +137,10 @@ $config = [
 
 if (file_exists(__DIR__ . '/db-local.php')){
     $config['components']['db'] = require(__DIR__ . '/db-local.php');
+}
+
+if (file_exists(__DIR__ . '/db-chrestomathy.php')){
+    $config['components']['db_chrestomathy'] = require(__DIR__ . '/db-chrestomathy.php');
 }
 
 if (YII_ENV_DEV) {

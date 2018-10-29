@@ -31,7 +31,8 @@
         "yiisoft/yii2-imagine": "*",
         "wbraganca/yii2-selectivity": "*",
         "kartik-v/bootstrap-star-rating": "@dev",
-        "philippfrenzel/yii2fullcalendar": "*"
+        "philippfrenzel/yii2fullcalendar": "*",
+        "alpiiscky/yii2-image-cache": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

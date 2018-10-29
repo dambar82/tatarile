@@ -26,6 +26,7 @@ phpunit.phar
 /phpunit.xml
 
 /config/db-local.php
+/config/db-chrestomathy.php
 /messages
 
 /node_modules

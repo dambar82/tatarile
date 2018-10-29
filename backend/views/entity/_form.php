@@ -136,6 +136,16 @@ else {
                             ],
                         ])?>
 
+                        <?= $form->field($model, 'popular')->widget(SwitchInput::classname(), [
+                            'pluginOptions' => [
+                                'onColor' => 'success',
+                                'offColor' => 'danger',
+                                'onText' => 'На главную',
+                                'offText' => 'Не показывать',
+                                'handleWidth'=>60,
+                            ],
+                        ])->label('Популярность')?>
+
                         <?= $form->field($model, 'user')->dropDownList(ArrayHelper::map(\webvimark\modules\UserManagement\models\User::find()->all(),'id','username')) ?>
 
                         <?= $form->field($model, "thumbnail")->widget(FileInput::classname(), [

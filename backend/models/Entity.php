@@ -26,6 +26,7 @@ use yii\base\Exception;
  * @property string $event_date_end
  * @property string $slug
  * @property integer $entity_type_id
+ * @property integer $popular
  * @property string $thumbnail
  */
 class Entity extends \yii\db\ActiveRecord
@@ -64,7 +65,7 @@ class Entity extends \yii\db\ActiveRecord
             ['slug', 'validateSlug'],//, 'on' => 'insert'
             [['event_date_begin','event_date_end'],'validateDate'],
             [['event_date_begin','event_date_end'],'safe'],
-            [['cor','image_cor','ready'],'integer', 'min' => 0, 'max' => 1]
+            [['cor','image_cor','ready', 'popular'],'integer', 'min' => 0, 'max' => 1]
         ];
     }
 
@@ -91,7 +92,8 @@ class Entity extends \yii\db\ActiveRecord
             'cor' => Yii::t('app','Entity is corrected'),
             'image_cor' => Yii::t('app','Images are correct'),
             'ready' => Yii::t('app','Content is ready'),
-            'comments' => Yii::t('app','Admin comments')
+            'comments' => Yii::t('app','Admin comments'),
+            'popular' => Yii::t('app','Popular')
         ];
     }
 
@@ -359,5 +361,14 @@ class Entity extends \yii\db\ActiveRecord
     public function getCategoryName()
     {
         return $this->category->propsByCurrentLang->value;
+    }
+
+    public function getEav()
+    {
+        $this->setEav();
+        return $this->hasOne(EntityEav::class, ['entity_id' => 'id'])
+            ->onCondition(['lang_id' => Lang::getCurrent()->id])
+            ->andOnCondition(['property_id' => 1])
+            ->andOnCondition(['<>', 'value', '']);
     }
 }
