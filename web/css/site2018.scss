@@ -769,38 +769,60 @@ ul.main-menu {
 /*  Footer
 ------------------------*/
 #footer {
-    border-top: 2px solid #ffffff;
-    background: #00ad83;
+    border-top: 7px solid #cccccc;
+    background: #999999;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 25px 0;
 }
-.footer_content > div {
-    display: table;
-    width: 100%;
+
+.block--copy {
+    margin-top: 20px;
+    font-family: $fTrebuchet;
+
+    p {
+        margin: 0;
+    }
 }
-.footer_block {
-    display: table-cell;
-    float: none;
-    vertical-align: middle;
+
+.form-subscribe {
+    margin-top: 20px;
+
+    .form--label {
+        font-size: 22px;
+        font-weight: 400;
+        font-family: $fTrebuchet;
+    }
+    .form--item {
+        width: 100%;
+        border: 2px solid #cccccc;
+        text-align: center;
+        font-size: 18px;
+        color: #b2b2b2;
+        padding: 6px 15px;
+    }
 }
+
 .second_footer {
     text-align: center;
+}
+.third_footer {
+    text-align: right;
 }
 .bottom_menu {
     list-style: none;
     padding: 0;
-    text-align: right;
+    text-align: left;
+    display: inline-block;
+    margin-top: 20px;
 
     a {
         color: #ffffff;
-        font-size: 15px;
+        font-size: 20px;
+        font-family: $fTrebuchet;
     }
 }
 .height100 {
     height: 100%;
-}
-#footer .logo img {
-    max-width: 210px;
 }
 
 .not-front {
