@@ -25,7 +25,7 @@ foreach ($items as $item)
 
 <aside class="main-sidebar">
     <section class="sidebar">
-		<ul class="sidebar-menu" data-widget='tree'>
+		<ul class="sidebar-menu tree" data-widget='tree'>
 			<li class="header"><span><?echo Yii::t('app', 'Backend menu');?></span></li>
 			<?php
 			foreach ($menu as $menu_item)
