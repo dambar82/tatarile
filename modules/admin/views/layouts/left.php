@@ -33,7 +33,7 @@ foreach ($items as $item)
 				echo $menu_item['title'];
 				if (!empty($menu_item['menu']))
 				{
-					echo "<ul class='treeview-menu menu-open' style='display: none;'>";
+					echo "<ul class='menu-open' style='display: none;'>";
 					foreach ($menu_item['menu'] as $submenu)
 					{
 						echo $submenu;
