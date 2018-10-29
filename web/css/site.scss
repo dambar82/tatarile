@@ -3549,3 +3549,179 @@ h2,
     border: none;
     margin: 1em;
 }
+
+.download_visible {
+    display: none;
+    position: absolute;
+    bottom: 102%;
+    width: 200px;
+    text-align: left;
+    border: 3px solid #37b3d2;
+    border-radius: 5px;
+    left: -10%;
+}
+
+.download_visible::after {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    border-right: 3px solid #37b3d2;
+    border-bottom: 3px solid #37b3d2;
+}
+
+/*  Audiojs
+------------------------*/
+.entity_audio {
+    background: #25d4a1;
+    z-index: 5;
+}
+.entity_audio .audiojs {
+    width: 100%;
+    height: auto;
+    background: none;
+    filter: Shadow(Color=#ffffff, Direction=0, Strength=0);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    padding-left: 74px;
+    padding-right: 14px;
+}
+.entity_audio .audiojs .play-pause {
+    border: none;
+    width: 62px;
+    height: 62px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.entity_audio .audiojs .play-pause:hover {
+    background: #bdf2e3;
+}
+.entity_audio .audiojs.playing .play-pause {
+    background: #ffffff;
+}
+.entity_audio .audiojs p {
+    margin: 0 auto;
+    background: none;
+    width: auto;
+    height: auto;
+    font-size: 36px;
+    color: #ffffff;
+}
+.entity_audio .audiojs.playing p {
+    color: #25d4a1;
+}
+.entity_audio .audiojs .play::after {
+    content: "\e072";
+    font-family: "Glyphicons Halflings";
+}
+.entity_audio .audiojs .pause::after {
+    content: "\e073";
+    font-family: "Glyphicons Halflings";
+}
+.entity_audio .audiojs .time,
+.entity_audio .audiojs .error-message {
+    display: none;
+}
+
+.entity_audio .audiojs .scrubber {
+    height: 30px;
+    margin: 16px 0;
+    z-index: 1;
+    background: #ffffff;
+    border: none;
+    width: 0;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.entity_audio .audiojs.playing .scrubber {
+    width: 100%;
+    cursor: pointer;
+}
+.entity_audio .audiojs .progress {
+    background: #ecd10e;
+    height: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin: 0;
+}
+.entity_audio .audiojs .loaded {
+    background: #fff6b9;
+    height: 100%;
+}
+
+.entity_audio .block-content {
+    position: relative;
+    min-height: 80px;
+    padding: 9px 4%;
+}
+.entity_audio .entity_audio-title {
+    position: absolute;
+    z-index: 0;
+    top: 26px;
+    left: 118px;
+    overflow: hidden;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: 600;
+    letter-spacing: 2px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+@media all and (max-width: 439px) {
+    .entity_audio .audiojs {
+        padding: 0;
+    }
+    .entity_audio .audiojs .play-pause {
+        float: none;
+        margin: 0 auto;
+        position: relative;
+    }
+    .entity_audio .audiojs .scrubber {
+        float: none;
+        margin: 15px 0 0;
+    }
+    .entity_audio .audiojs.playing .scrubber {
+        width: 100%;
+    }
+    .entity_audio .entity_audio-title {
+        margin: 0 auto;
+        top: 64%;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .entity_audio.is_stuck .entity_audio-title {
+        height: 0;
+    }
+    .entity_audio.is_stuck .audiojs .scrubber {
+        height: 0;
+        margin: 0;
+    }
+}
