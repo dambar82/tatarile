@@ -7,7 +7,6 @@ if($lang->id != 2) {
     $lang_url = '/'.$lang->url;
 }
 ?>
-?>
 
 <?php if ($entities): ?>
     <div class="section">
