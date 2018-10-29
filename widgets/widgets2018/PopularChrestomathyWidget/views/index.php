@@ -9,7 +9,7 @@ if($lang->id != 2) {
 ?>
 
 <?php if ($entities): ?>
-    <div class="section">
+    <div class="section sc-js">
         <div class="container-fluid">
             <div class="view--entity">
                 <h2><?= Yii::t('app','ПОПУЛЯРНЫЕ СТАТЬИ'); ?></h2>
@@ -23,7 +23,7 @@ if($lang->id != 2) {
                                     </div>
                                     <div class="entity--img">
                                         <a href="<?= \app\components\ChrestomathyUrlHelper::createEntityUrl($entity->id)?>">
-                                            <?= \app\modules\file\widgets\Thumbnail::widget(['id' => $entity->id])?>
+                                            <?= \app\modules\file\widgets\Thumbnail2::widget(['id' => $entity->id])?>
                                         </a>
                                     </div>
                                     <div class="entity--title">
@@ -46,3 +46,17 @@ if($lang->id != 2) {
         </div>
     </div>
 <?php endif; ?>
+
+<?php
+$this->registerCss("
+   .sc-js .view--entity .entity--img img {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+   }
+   .sc-js .entity-thumbnail {
+        height: 280px;
+        width: 100%;
+   }
+");
+?>
