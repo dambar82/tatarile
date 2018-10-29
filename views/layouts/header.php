@@ -62,7 +62,7 @@ if($lang->id != 2) {
                         <div class="inside-row_content">
                             <ul class="nav nav-pills main_menu">
                                 <li>
-                                    <a href="/<?=\app\models\Lang::getCurrent()->url?>/encyclopedia?category_id=2"><small><?= Yii::t('app','ШКОЛЬНАЯ ЭЛЕКТРОННАЯ'); ?></small><?= Yii::t('app','Library'); ?></a>
+                                    <a href="/<?=\app\models\Lang::getCurrent()->url?>/encyclopedia?category_id=2"><small><?= Yii::t('app','ШКОЛЬНАЯ ЭЛЕКТРОННАЯ'); ?></small><?= Yii::t('app','Library1'); ?></a>
                                 </li>
 
                                 <?php if ($cur_lang->id != 2): ?>

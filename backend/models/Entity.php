@@ -350,4 +350,14 @@ class Entity extends \yii\db\ActiveRecord
             }
         }
     }
+
+    public function getCategory()
+    {
+        return $this->hasOne(Subject::class, ['id' => 'category_id']);
+    }
+
+    public function getCategoryName()
+    {
+        return $this->category->propsByCurrentLang->value;
+    }
 }

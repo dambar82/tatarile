@@ -131,4 +131,9 @@ class Subject extends \yii\db\ActiveRecord
             ->all();
         return ArrayHelper::map($default_value,'id','value');
     }
+
+    public function getPropsByCurrentLang()
+    {
+        return $this->hasOne(SubjectEav::class, ['subject_id' => 'id'])->andOnCondition(['lang_id' => Lang::getCurrent()->id, 'property_id' => 1]);
+    }
 }
