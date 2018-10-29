@@ -13,9 +13,9 @@ else
                     <img class="img-responsive" src="<?=$thumbnail?>" alt="<?=$model_eav['title']?>">
                 </div>
                 <div class="text-center book_read_block">
-                    <?php if ($showHide) :?>
+<!--                    --><?php //if ($showHide) :?>
                         <a href="#book-modal" class="btn book_read_btn"><?=Yii::t('app','Book read')?></a>
-                    <?php endif; ?>
+<!--                    --><?php //endif; ?>
                 </div>
             </div>
         </div>

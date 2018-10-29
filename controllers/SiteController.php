@@ -51,14 +51,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout = "mainPage";
-        return $this->render('index');
+        $this->layout = "@app/themes/theme2018/layouts/main";
+        return $this->render('@app/themes/theme2018/views/site/index');
     }
-    /**
-     * Displays contact page.
-     *
-     * @return string
-     */
+
+
     public function actionContact()
     {
         $model = new ContactForm();

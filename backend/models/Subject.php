@@ -136,4 +136,9 @@ class Subject extends \yii\db\ActiveRecord
     {
         return $this->hasOne(SubjectEav::class, ['subject_id' => 'id'])->andOnCondition(['lang_id' => Lang::getCurrent()->id, 'property_id' => 1]);
     }
+
+    public function getEav()
+    {
+        return $this->hasOne(SubjectEav::class, ['subject_id' => 'id']);
+    }
 }
