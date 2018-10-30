@@ -782,6 +782,11 @@ ul.main-menu {
     background: #999999;
     color: #ffffff;
     padding: 25px 0;
+
+    .inside_footer {
+        margin: auto;
+        max-width: 1100px;
+    }
 }
 
 .block--copy {
