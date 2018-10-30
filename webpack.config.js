@@ -7,7 +7,9 @@ module.exports = {
     mode: "development",
     entry: {
         site: ["./web/css/site.scss"],
-        site2018: ["./web/css/site2018.scss"]
+        site2018: ["./web/css/site2018.scss"],
+        header: ["./web/css/header.scss"],
+        footer: ["./web/css/footer.scss"]
     },
     output: {
         path: __dirname + "/web/css"
