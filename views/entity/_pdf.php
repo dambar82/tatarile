@@ -31,12 +31,14 @@ else
         </div>
         <div class="col-xs-12">
             <div class="view--book-preview">
-                <h2>Страницы из книги</h2>
+                <div class="text-center">
+                    <h2 class="view--title">Страницы из книги</h2>
+                </div>
                 <div class="owl-carousel">
                     <?php for ($i=0; $i < 5; $i++): ?>
-                        <div>
-                            <a href="" class="colorbox">
-                                <img src="" alt="" class="img-responsive">
+                        <div class="view--row">
+                            <a href="/images/rotator1.jpg" data-fancybox="gallery">
+                                <img src="/images/rotator1.jpg" alt="" class="img-responsive">
                             </a>
                         </div>
                     <?php endfor; ?>
@@ -88,12 +90,31 @@ if ($showHide) {
             closeOnEscape: true,
             overlay: true,
         });
-
-        
-        $(".owl-carousel").owlCarousel();
-
-
 JS;
+
     $this->registerJs($script);
 }
 
+?>
+
+<?php
+$script2 = <<< JS
+    $(".owl-carousel").owlCarousel({
+        nav: true,
+        navText: ["", ""],
+        dots: false,
+        responsive : {
+            0 : {
+                items: 1
+            },
+            800 : {
+                items: 2
+            },
+            1399 : {
+                items: 3
+            }
+        }
+    });
+JS;
+$this->registerJs($script2, yii\web\View::POS_END);
+?>

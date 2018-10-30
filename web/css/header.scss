@@ -1,3 +1,67 @@
+/*  pre-header
+------------------------*/
+.pre-header {
+    background: #e5e5e5;
+    padding-top: 20px;
+
+    .content {
+        position: relative;
+    }
+    .block--lang {
+        position: absolute;
+        bottom: 0;
+        right: -260px;
+    }
+
+    @media all and (max-width: 1599px) {
+        .block--lang {
+            position: static;
+            float: right;
+        }
+    }
+}
+
+.block--dop-links {
+    float: right;
+}
+
+.dop-links {
+    li {
+        a {
+            color: #000;
+            font-family: $fTrebuchet;
+            padding: 4px 15px;
+        }
+    }
+}
+
+.lang-menu {
+    width: 210px;
+
+    li.menu--item {
+        margin: 0;
+        float: left;
+
+        a,
+        span {
+            width: 70px;
+            display: inline-block;
+            text-transform: uppercase;
+            padding: 4px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        a {
+            color: #767676;
+        }
+        span {
+            color: #039b91;
+            background: #fff;
+        }
+    }
+}
+
 /*  header
 ------------------------*/
 .header {

@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\n\r\n            font-family: $fTrebuchet;\r\n                        ^\r\n      Undefined variable: \"$fTrebuchet\".\r\n      in C:\\OpenServer\\domains\\tatarile\\web\\css\\header.scss (line 32, column 26)\n    at runLoaders (C:\\OpenServer\\domains\\tatarile\\node_modules\\webpack\\lib\\NormalModule.js:286:20)\n    at C:\\OpenServer\\domains\\tatarile\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at C:\\OpenServer\\domains\\tatarile\\node_modules\\loader-runner\\lib\\LoaderRunner.js:230:18\n    at context.callback (C:\\OpenServer\\domains\\tatarile\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.render [as callback] (C:\\OpenServer\\domains\\tatarile\\node_modules\\sass-loader\\lib\\loader.js:52:13)\n    at Object.done [as callback] (C:\\OpenServer\\domains\\tatarile\\node_modules\\neo-async\\async.js:8077:18)\n    at options.error (C:\\OpenServer\\domains\\tatarile\\node_modules\\node-sass\\lib\\index.js:294:32)");
 
 /***/ }),
 
