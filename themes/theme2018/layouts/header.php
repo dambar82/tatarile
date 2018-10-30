@@ -32,7 +32,7 @@ if($lang->id != 2) {
         </div>
     </div>
 </div>
-<div class="header">
+<div class="header header-encyclop">
     <div class="container-fluid">
         <div class="content row">
             <div class="block--logo col-xs-12">
