@@ -29,6 +29,20 @@ else
                 } ?>
             </div>
         </div>
+        <div class="col-xs-12">
+            <div class="view--book-preview">
+                <h2>Страницы из книги</h2>
+                <div class="owl-carousel">
+                    <?php for ($i=0; $i < 5; $i++): ?>
+                        <div>
+                            <a href="" class="colorbox">
+                                <img src="" alt="" class="img-responsive">
+                            </a>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </div>
+        </div>
     </div>
     <?php if (!empty($tags_model)) : ?>
         <div class="entity-tags entity-tags-pdf">
@@ -52,26 +66,33 @@ if ($showHide) {
     $titlas = "'".$model_eav['title']."'";
     $urlas = "'".$content->filename."'";
     $script = <<< JS
-$('.book_read_btn').on('click', function (event) {
-    event.preventDefault();
-    $('#modalpdf').iziModal('open', this);
-});
-$("#modalpdf").iziModal({
-    title: $titlas,
-    theme: '',
-    headerColor: '#00ad83',
-    overlayColor: 'rgba(0, 0, 0, 0.4)',
-    iconColor: '',
-    iconClass: null,
-    iframe: true,
-    iframeURL: $urlas,
-    padding: 0,
-    fullscreen: true,
-    openFullscreen: true,
-    overlayClose: true,
-    closeOnEscape: true,
-    overlay: true,
-});
+
+        $('.book_read_btn').on('click', function (event) {
+            event.preventDefault();
+            $('#modalpdf').iziModal('open', this);
+        });
+
+        $("#modalpdf").iziModal({
+            title: $titlas,
+            theme: '',
+            headerColor: '#00ad83',
+            overlayColor: 'rgba(0, 0, 0, 0.4)',
+            iconColor: '',
+            iconClass: null,
+            iframe: true,
+            iframeURL: $urlas,
+            padding: 0,
+            fullscreen: true,
+            openFullscreen: true,
+            overlayClose: true,
+            closeOnEscape: true,
+            overlay: true,
+        });
+
+        
+        $(".owl-carousel").owlCarousel();
+
+
 JS;
     $this->registerJs($script);
 }

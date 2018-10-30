@@ -25,6 +25,8 @@ class AppAsset extends AssetBundle
         'css/jquery-ui-autocomplete.min.css',
         'css/iziModal.css',
         'js/colorbox/colorbox.css',
+        'js/owlCarousel/owl.carousel.min.css',
+        'js/owlCarousel/owl.theme.default.css',
         'css/site.css'
     ];
     public $js = [
@@ -37,6 +39,7 @@ class AppAsset extends AssetBundle
         'js/pluso.js',
         'js/scrolltopcontrol.js',
         'js/classie.js',
+        'js/owlCarousel/owl.carousel.min.js',
         'js/site.js',
         'js/colorbox/jquery.colorbox-min.js'
     ];
