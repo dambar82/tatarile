@@ -40,7 +40,8 @@
         </div>
         <div class="block--lnks-article">
             <div class="container-fluid">
-                <p>Читать адаптированные статьи по <a href="">истории</a>, <a href="">географии</a>, смотреть <a href="">мультфильмы</a></p>
+                <p>
+                    <?= Yii::t('app','inf'); ?>
             </div>
         </div>
     </div>
@@ -48,15 +49,15 @@
 <?php
 $script = <<< JS
 $('input[name="q"]').autocomplete({
-            source:"$lang_url/search",
-            minLength: 3
-        });
-        $('form.form_main_search').on('submit',function(e) {
-            e.preventDefault();
-            var obj = $(this);
-            var ser = encodeURIComponent(obj.find('input[name="q"]').val().trim());
-            if(ser.length > 0)
-                window.location.href = obj.attr('action')+"?q="+ser;
-        });
+    source:"$lang_url/search",
+    minLength: 3
+});
+$('form.form_main_search').on('submit',function(e) {
+    e.preventDefault();
+    var obj = $(this);
+    var ser = encodeURIComponent(obj.find('input[name="q"]').val().trim());
+    if(ser.length > 0)
+        window.location.href = obj.attr('action')+"?q="+ser;
+});
 JS;
 $this->registerJs($script, yii\web\View::POS_READY);
