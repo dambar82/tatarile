@@ -52,6 +52,17 @@ if($lang->id != 2) {
                     </li>
                 </ul>
             </div>
+            <div class="block--auth col-xs-12">
+                <div class="view--auth">
+                    <?php if (Yii::$app->user->isGuest) { ?>
+                        <a href="/login" class="auth-lnk"><?= Yii::t('app','Login'); ?></a>
+                        <a href="/register" class="registr-lnk"><?= Yii::t('app','Register'); ?></a>
+                    <?php } else { ?>
+                        <a href="/<?=\app\models\Lang::getCurrent()->url?>/user" class="cabinet-lnk"><?= Yii::t('app','Cabinet'); ?></a>
+                        <a href="/<?=\app\models\Lang::getCurrent()->url?>/logout" class="logout-lnk"><?= Yii::t('app','Logout'); ?></a>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,5 +1,12 @@
 $fTrebuchet: "Trebuchet MS";
 
+.pre-header,
+.header {
+    .container-fluid {
+        max-width: 1100px;
+    }
+}
+
 /*  pre-header
 ------------------------*/
 .pre-header {
@@ -15,7 +22,10 @@ $fTrebuchet: "Trebuchet MS";
         right: -260px;
     }
 
-    @media all and (max-width: 1599px) {
+    @media all and (max-width: 1749px) {
+        .container-fluid {
+            max-width: 100%;
+        }
         .block--lang {
             position: static;
             float: right;
@@ -83,6 +93,12 @@ $fTrebuchet: "Trebuchet MS";
     }
     .block--main-menu {
         padding: 0 15px;
+    }
+    .block--auth {
+        position: absolute;
+        text-align: right;
+        top: 22px;
+        right: -235px;
     }
 }
 .not-front .header {
@@ -188,8 +204,40 @@ ul.main-menu {
     }
 }
 
+.view--auth a {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #e5e5e5;
+
+    &.auth-lnk,
+    &.logout-lnk {
+        border-bottom: 2px dashed #e5e5e5;
+        margin: 4px 0;
+        display: inline-block;
+    }
+    &.registr-lnk,
+    &.cabinet-lnk {
+        margin: 4px 0;
+        margin-left: 10px;
+        border: 2px solid #e5e5e5;
+        border-radius: 7px;
+        padding: 8px;
+        display: inline-block;
+    }
+    &.cabinet-lnk {
+        margin-left: 0;
+    }
+    &.logout-lnk {
+        margin-left: 10px;
+    }
+}
+
 .header {
     @media all and (max-width: 1749px) {
+        .container-fluid {
+            max-width: 100%;
+        }
         .block--logo {
             position: initial;
             margin-top: 15px;
@@ -197,12 +245,11 @@ ul.main-menu {
         .block--main-menu {
             width: auto;
         }
-    }
-}
-
-.pre-header,
-.header {
-    .container-fluid {
-        max-width: 1100px;
+        .block--auth {
+            position: static;
+            float: right;
+            width: auto;
+            margin-top: 22px;
+        }
     }
 }
