@@ -8,7 +8,7 @@ foreach ($items as $item)
 		foreach ($items as $subitem){ if ($item['id']==$subitem['type']) { $flag=1;}}
 		if ($flag==1)
 		{
-			$menu[$item['id']]['title']="<li><a href='#'><i class='".$item['icon']."'></i><span>".Yii::t('app', $item['name'])."</span><span class='pull-right-container'><i class='fa fa-angle-left pull-right'></i></span></a>";
+			$menu[$item['id']]['title']="<li class='treeview'><a href='#'><i class='".$item['icon']."'></i><span>".Yii::t('app', $item['name'])."</span><span class='pull-right-container'><i class='fa fa-angle-left pull-right'></i></span></a>";
 		}
 		else
 		{
@@ -23,6 +23,8 @@ foreach ($items as $item)
 //if (\webvimark\modules\UserManagement\models\User::hasRole('Admin'))
 ?>
 
+
+
 <aside class="main-sidebar">
     <section class="sidebar">
 		<ul class="sidebar-menu tree" data-widget='tree'>
@@ -33,7 +35,7 @@ foreach ($items as $item)
 				echo $menu_item['title'];
 				if (!empty($menu_item['menu']))
 				{
-					echo "<ul class='menu-open' style='display: none;'>";
+					echo "<ul class='treeview-menu menu-open'>";
 					foreach ($menu_item['menu'] as $submenu)
 					{
 						echo $submenu;
