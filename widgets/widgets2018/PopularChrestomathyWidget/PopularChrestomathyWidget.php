@@ -24,7 +24,7 @@ class PopularChrestomathyWidget extends Widget
             ->all();
 
         return $this->render('index', [
-            'entities' => $entities
+            'entities' => []
         ]);
     }
 }
