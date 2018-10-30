@@ -34,6 +34,7 @@ use app\backend\models\EntityProperty;
 use app\models\Lang;
 use yii\web\UploadedFile;
 use yii\imagine\Image;
+use zxbodya\yii2\galleryManager\GalleryManagerAction;
 
 /**
  * EntityController implements the CRUD actions for Entity model.
@@ -45,6 +46,18 @@ class EntityController extends Controller
     private $uploadVideoDir = "files/video/";
     private $uploadPdfDir = "files/pdf/";
     private $uploadThumbStyleDir = "files/280x230/";
+
+    public function actions()
+    {
+        return [
+            'galleryApi' => [
+                'class' => GalleryManagerAction::className(),
+                'types' => [
+                    'razvorot' => PdfContent::className()
+                ]
+            ],
+        ];
+    }
 
     /**
      * @inheritdoc

@@ -32,7 +32,9 @@
         "wbraganca/yii2-selectivity": "*",
         "kartik-v/bootstrap-star-rating": "@dev",
         "philippfrenzel/yii2fullcalendar": "*",
-        "alpiiscky/yii2-image-cache": "*"
+        "alpiiscky/yii2-image-cache": "*",
+        "dvizh/yii2-gallery": "@dev",
+        "zxbodya/yii2-gallery-manager": "*@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
