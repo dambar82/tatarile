@@ -23,7 +23,6 @@ class PopularChrestomathyWidget extends Widget
             ->limit(6)
             ->all();
 
-
         return $this->render('index', [
             'entities' => $entities
         ]);

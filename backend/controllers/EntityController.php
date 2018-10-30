@@ -53,7 +53,7 @@ class EntityController extends Controller
             'galleryApi' => [
                 'class' => GalleryManagerAction::className(),
                 'types' => [
-                    'razvorot' => PdfContent::className()
+                    'razvorot' => Entity::className()
                 ]
             ],
         ];

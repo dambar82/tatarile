@@ -9,6 +9,7 @@ use Yii;
 use webvimark\modules\UserManagement\models\User;
 use app\models\Lang;
 use yii\base\Exception;
+use zxbodya\yii2\galleryManager\GalleryBehavior;
 
 /**
  * This is the model class for table "article".
@@ -41,8 +42,18 @@ class Entity extends \yii\db\ActiveRecord
                     \yii\db\ActiveRecord::EVENT_BEFORE_UPDATE => ['date_update'],
                 ],
             ],
+            'galleryBehavior' => [
+                'class' => GalleryBehavior::className(),
+                'type' => 'razvorot',
+                'extension' => 'jpg',
+                'directory' => Yii::getAlias('@webroot') . '/files/gallery',
+                'url' => Yii::getAlias('@web') . '/files/gallery',
+                'versions' => [
+                ]
+            ]
         ];
     }
+
 
     /**
      * @inheritdoc

@@ -38,12 +38,12 @@ if (!empty($model_pdf['filename'])) {
             ?>
 
             <?php
-            if ($model_pdf->isNewRecord) {
+            if ($model->isNewRecord) {
                 echo 'Can not upload images for new record';
             } else {
                 echo \zxbodya\yii2\galleryManager\GalleryManager::widget(
                     [
-                        'model' => $model_pdf,
+                        'model' => $model,
                         'behaviorName' => 'galleryBehavior',
                         'apiRoute' => '/backend/entity/galleryApi'
                     ]
