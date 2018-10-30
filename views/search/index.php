@@ -18,6 +18,7 @@ for($i = 0; $i<3; $i++) {
     if(count($randomHashTag) > 0)
         $randomHashTags[] = $randomHashTag[0];
 }
+Yii::$app->params['activ'] = '1';
 ?>
 <div class="top_filter">
     <div class="container-fluid">
