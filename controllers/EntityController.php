@@ -29,7 +29,6 @@ class EntityController extends Controller
     public $freeAccess = true;
     public $viewFile = 'index';
 
-
     public function actionProduct($id)
     {
         if (!isset($id)) {

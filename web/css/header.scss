@@ -1,3 +1,5 @@
+$fTrebuchet: "Trebuchet MS";
+
 /*  pre-header
 ------------------------*/
 .pre-header {
@@ -65,6 +67,7 @@
 /*  header
 ------------------------*/
 .header {
+    background: #fff;
     .content {
         position: relative;
     }
@@ -151,5 +154,12 @@ ul.main-menu {
         .block--main-menu {
             width: auto;
         }
+    }
+}
+
+.pre-header,
+.header {
+    .container-fluid {
+        max-width: 1100px;
     }
 }
