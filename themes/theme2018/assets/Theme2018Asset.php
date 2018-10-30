@@ -18,7 +18,9 @@ class Theme2018Asset extends AssetBundle
         'css/slick.css',
         'js/noUiSlider/nouislider.css',
         'css/jquery-ui-autocomplete.min.css',
-        'css/site2018.css'
+        'css/site2018.css',
+        'css/header.css',
+        'css/footer.css'
     ];
     public $js = [
         'js/view.js',

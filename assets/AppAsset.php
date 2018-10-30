@@ -27,7 +27,9 @@ class AppAsset extends AssetBundle
         'js/colorbox/colorbox.css',
         'js/owlCarousel/owl.carousel.min.css',
         'js/owlCarousel/owl.theme.default.css',
-        'css/site.css'
+        'css/site.css',
+        'css/header.css',
+        'css/footer.css'
     ];
     public $js = [
         'js/noUiSlider/nouislider.min.js',
