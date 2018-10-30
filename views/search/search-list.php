@@ -33,6 +33,7 @@ if(!$pagination) {
                         </div>
                     </div>
 
+                    <?php if ($subcats) : ?>
                     <div class="filter_field filter_temi">
                         <div class="filter_title"><label for="filter_temi"><?=Yii::t('app','Subject')?></label></div>
                         <div class="field_items">
@@ -49,6 +50,7 @@ if(!$pagination) {
                             ?>
                         </div>
                     </div>
+                    <?php endif?>
 
                         <?php
                     if(count($entity_types) > 1) {

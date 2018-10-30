@@ -134,11 +134,11 @@ class Subject extends \yii\db\ActiveRecord
 
     public function getPropsByCurrentLang()
     {
-        return $this->hasOne(SubjectEav::class, ['subject_id' => 'id'])->andOnCondition(['lang_id' => Lang::getCurrent()->id, 'property_id' => 1]);
+        return $this->hasOne(SubjectEav::class, ['subject_id' => 'id'])->where(['lang_id' => Lang::getCurrent()->id, 'property_id' => 1]);
     }
 
     public function getEav()
     {
-        return $this->hasOne(SubjectEav::class, ['subject_id' => 'id']);
+        return $this->hasOne(SubjectEav::class, ['subject_id' => 'id'])->onCondition(['subject_eav.lang_id' => Lang::getCurrent()->id, 'subject_eav.property_id' => 1]);
     }
 }
