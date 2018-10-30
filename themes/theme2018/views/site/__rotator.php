@@ -12,6 +12,9 @@
         <div class="rotator-row slide">
             <img src="/images/slide4.jpg" alt="" />
         </div>
+        <div class="rotator-row slide">
+            <img src="/images/slide5.jpg" alt="" />
+        </div>
     </div>
     <div class="block--content">
         <div class="container-fluid">

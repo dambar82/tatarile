@@ -66,7 +66,6 @@ else
 
 </div>
 <?php
-if ($showHide) {
     $titlas = "'".$model_eav['title']."'";
     $urlas = "'".$content->filename."'";
     $script = <<< JS
@@ -93,9 +92,7 @@ if ($showHide) {
             overlay: true,
         });
 JS;
-
-    $this->registerJs($script);
-}
+$this->registerJs($script);
 
 ?>
 
