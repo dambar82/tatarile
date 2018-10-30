@@ -1,3 +1,17 @@
+<?php
+use app\widgets\WLang;
+
+$path = \Yii::$app->getRequest()->getPathInfo();
+if(strlen($path) > 0 && $path[strlen($path)-1] == '/')
+    $path = substr($path,0,strlen($path)-1);
+$pathRoot = explode('/',$path)[0];
+$lang = \app\models\Lang::getCurrent();
+$lang_url = "";
+if($lang->id != 2) {
+    $lang_url = '/'.$lang->url;
+}
+?>
+
 <div id="footer">
     <div class="inside_footer">
         <div class="container-fluid">
@@ -23,8 +37,8 @@
                     <ul class="bottom_menu">
                         <li><a href="<?=\yii\helpers\Url::to('http://tatarile.tatar')?>"><?= Yii::t('app','Library'); ?></a></li>
                         <li><a href="<?=\yii\helpers\Url::to('http://chrestomathy.tatarile.tatar')?>"><?= Yii::t('app','Chrestomathy'); ?></a></li>
-                        <li><a href="<?=\yii\helpers\Url::to('/site/about')?>"><?= Yii::t('app','About'); ?></a></li>
-                        <li><a href="<?=\yii\helpers\Url::to('/site/contact')?>"><?= Yii::t('app','Contacts'); ?></a></li>
+                        <li><a href="<?=$lang_url.\yii\helpers\Url::to('/site/about')?>"><?= Yii::t('app','About'); ?></a></li>
+                        <li><a href="<?=$lang_url.\yii\helpers\Url::to('/site/contact')?>"><?= Yii::t('app','Contacts'); ?></a></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-4 footer_block second_footer">
