@@ -3,6 +3,7 @@
 namespace app\modules\admin\models;
 
 use Yii;
+use zxbodya\yii2\galleryManager\GalleryBehavior;
 
 /**
  * This is the model class for table "pdf_content".
@@ -19,6 +20,21 @@ class PdfContent extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'pdf_content';
+    }
+
+    public function behaviors()
+    {
+        return [
+            'galleryBehavior' => [
+                'class' => GalleryBehavior::className(),
+                'type' => 'razvorot',
+                'extension' => 'jpg',
+                'directory' => Yii::getAlias('@webroot') . '/files/gallery',
+                'url' => Yii::getAlias('@web') . '/files/gallery',
+                'versions' => [
+                ]
+            ]
+        ];
     }
 
     /**
