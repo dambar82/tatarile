@@ -29,14 +29,14 @@ else
                 } ?>
             </div>
         </div>
-        <?php if ($content->getBehavior('galleryBehavior')->getImages()) : ?>
+        <?php if ($model->getBehavior('galleryBehavior')->getImages()) : ?>
             <div class="col-xs-12">
                 <div class="view--book-preview">
                     <div class="text-center">
                         <h2 class="view--title"><?=Yii::t('app','Страницы из книги')?></h2>
                     </div>
                     <div class="owl-carousel">
-                        <?php foreach($content->getBehavior('galleryBehavior')->getImages() as $image) : ?>
+                        <?php foreach($model->getBehavior('galleryBehavior')->getImages() as $image) : ?>
                             <div class="view--row">
                                 <a href="<?= $image->getUrl('original') ?>" data-fancybox="gallery">
                                     <img src="<?= $image->getUrl('original') ?>" alt="" class="img-responsive">

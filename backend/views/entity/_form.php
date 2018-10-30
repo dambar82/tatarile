@@ -379,6 +379,7 @@ else {
                     [
                         'form'=> $form,
                         'model_pdf' => $model_pdf,
+                        'model' => $model,
                     ]);
             }
             ?>

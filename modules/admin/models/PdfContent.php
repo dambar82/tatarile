@@ -22,21 +22,6 @@ class PdfContent extends \yii\db\ActiveRecord
         return 'pdf_content';
     }
 
-    public function behaviors()
-    {
-        return [
-            'galleryBehavior' => [
-                'class' => GalleryBehavior::className(),
-                'type' => 'razvorot',
-                'extension' => 'jpg',
-                'directory' => Yii::getAlias('@webroot') . '/files/gallery',
-                'url' => Yii::getAlias('@web') . '/files/gallery',
-                'versions' => [
-                ]
-            ]
-        ];
-    }
-
     /**
      * @inheritdoc
      */
