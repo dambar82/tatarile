@@ -90,6 +90,10 @@ else
             overlayClose: true,
             closeOnEscape: true,
             overlay: true,
+            transitionIn: 'fadeIn',
+            transitionOut: 'fadeOut',
+            transitionInOverlay: 'fadeIn',
+            transitionOutOverlay: 'fadeOut'
         });
 JS;
 $this->registerJs($script);

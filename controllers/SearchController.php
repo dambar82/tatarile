@@ -59,7 +59,7 @@ class SearchController extends \yii\web\Controller
 
         $category_id = (int)$request->get('category_id');
         if($category_id < 0 || !isset($parentSubjects[$category_id]))
-            $category_id = 0;
+            $category_id = 2;
 
         if($request->get('pagination') == 1) $pagination = true;
         if($request->isAjax && $pagination) {

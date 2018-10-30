@@ -26,7 +26,7 @@
             </div>
             <div class="block--main-search">
                 <div class="block--content">
-                    <form role="form" class="form--main-search" action="<?=$lang_url?>/search" method="GET">
+                    <form role="form" class="form--main-search form_main_search" action="<?=$lang_url?>/search" method="GET">
                         <div class="form--input">
                             <input class="input--field" type="text" name="q" value="" placeholder="<?= Yii::t('app','Enter search term'); ?>">
                         </div>
@@ -45,3 +45,18 @@
         </div>
     </div>
 </div>
+<?php
+$script = <<< JS
+$('input[name="q"]').autocomplete({
+            source:"$lang_url/search",
+            minLength: 3
+        });
+        $('form.form_main_search').on('submit',function(e) {
+            e.preventDefault();
+            var obj = $(this);
+            var ser = encodeURIComponent(obj.find('input[name="q"]').val().trim());
+            if(ser.length > 0)
+                window.location.href = obj.attr('action')+"?q="+ser;
+        });
+JS;
+$this->registerJs($script, yii\web\View::POS_READY);
