@@ -35,7 +35,7 @@ rmrevin\yii\fontawesome\AssetBundle::register($this);
 
     <div class="content_body">
 
-        <?= $this->render('header'); ?>
+        <?= $this->render('@app/themes/theme2018/layouts/header'); ?>
 
         <?= $content ?>
 

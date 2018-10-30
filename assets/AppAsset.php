@@ -27,6 +27,7 @@ class AppAsset extends AssetBundle
         'js/colorbox/colorbox.css',
         'js/owlCarousel/owl.carousel.min.css',
         'js/owlCarousel/owl.theme.default.css',
+        'js/fancybox/jquery.fancybox.min.css',
         'css/site.css',
         'css/header.css',
         'css/footer.css'
@@ -43,6 +44,7 @@ class AppAsset extends AssetBundle
         'js/classie.js',
         'js/owlCarousel/owl.carousel.min.js',
         'js/site.js',
+        'js/fancybox/jquery.fancybox.min.js',
         'js/colorbox/jquery.colorbox-min.js'
     ];
     public $depends = [
