@@ -44,7 +44,7 @@ if($lang->id != 2) {
             </div>
             <div class="block--main-menu col-xs-12">
                 <ul class="nav nav-pills main-menu">
-                    <li>
+                    <li <?= (isset(Yii::$app->params['activ'])) ? 'class="active"' : '' ?>>
                         <a href="/encyclopedia?category_id=2"><small><?= Yii::t('app','ШКОЛЬНАЯ ЭЛЕКТРОННАЯ'); ?></small><?= Yii::t('app','Library'); ?></a>
                     </li>
                     <li>

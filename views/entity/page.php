@@ -14,6 +14,8 @@ if($user)
 else
     $vote = NULL;
 $site = Yii::$app->params['siteURL'].\app\components\UrlHelper::createEntityUrl($model->id);
+
+Yii::$app->params['activ'] = '1';
 ?>
 
 <div class="main_block">
