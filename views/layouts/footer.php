@@ -21,8 +21,8 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-4 col-md-push-4 footer_block third_footer">
                     <ul class="bottom_menu">
-                        <li><a href="<?=\yii\helpers\Url::to('/site/about')?>"><?= Yii::t('app','энциклопедия'); ?></a></li>
-                        <li><a href="<?=\yii\helpers\Url::to('/site/about')?>"><?= Yii::t('app','хрестоматия'); ?></a></li>
+                        <li><a href="<?=\yii\helpers\Url::to('http://tatarile.tatar')?>"><?= Yii::t('app','Library'); ?></a></li>
+                        <li><a href="<?=\yii\helpers\Url::to('http://chrestomathy.tatarile.tatar')?>"><?= Yii::t('app','Chrestomathy'); ?></a></li>
                         <li><a href="<?=\yii\helpers\Url::to('/site/about')?>"><?= Yii::t('app','About'); ?></a></li>
                         <li><a href="<?=\yii\helpers\Url::to('/site/contact')?>"><?= Yii::t('app','Contacts'); ?></a></li>
                     </ul>
