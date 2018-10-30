@@ -331,14 +331,15 @@ h2 {
     }
     .entity--razdel {
         text-align: right;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
 
         span {
             color: #15a986;
             font-size: 13px;
             display: inline-block;
             padding: 6px 10px;
-            white-space: nowrap;
-            overflow: hidden;
         }
     }
 
