@@ -29,22 +29,24 @@ else
                 } ?>
             </div>
         </div>
-        <div class="col-xs-12">
-            <div class="view--book-preview">
-                <div class="text-center">
-                    <h2 class="view--title">Страницы из книги</h2>
-                </div>
-                <div class="owl-carousel">
-                    <?php for ($i=0; $i < 5; $i++): ?>
-                        <div class="view--row">
-                            <a href="/images/rotator1.jpg" data-fancybox="gallery">
-                                <img src="/images/rotator1.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                    <?php endfor; ?>
+        <?php if ($content->getBehavior('galleryBehavior')->getImages()) : ?>
+            <div class="col-xs-12">
+                <div class="view--book-preview">
+                    <div class="text-center">
+                        <h2 class="view--title"><?=Yii::t('app','Страницы из книги')?></h2>
+                    </div>
+                    <div class="owl-carousel">
+                        <?php foreach($content->getBehavior('galleryBehavior')->getImages() as $image) : ?>
+                            <div class="view--row">
+                                <a href="<?= $image->getUrl('original') ?>" data-fancybox="gallery">
+                                    <img src="<?= $image->getUrl('original') ?>" alt="" class="img-responsive">
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
     </div>
     <?php if (!empty($tags_model)) : ?>
         <div class="entity-tags entity-tags-pdf">
