@@ -31,7 +31,7 @@
                     <div class="view--subscribe">
                         <form role="form" class="form-subscribe">
                             <div class="form--groud">
-                                <label for="s-email" class="form--label">Подписаться на обновление</label>
+                                <label for="s-email" class="form--label"><?=Yii::t('app','Подписаться на обновление')?></label>
                                 <input id="s-email" type="text" name="subscribe" value="" placeholder="E-mail" class="form--item">
                             </div>
                             <!-- <div class="form-actions">

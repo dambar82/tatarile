@@ -1,80 +1,77 @@
-<?php
-use app\widgets\WLang;
-
-$path = \Yii::$app->getRequest()->getPathInfo();
-if(strlen($path) > 0 && $path[strlen($path)-1] == '/')
-    $path = substr($path,0,strlen($path)-1);
-$pathRoot = explode('/',$path)[0];
-$lang = \app\models\Lang::getCurrent();
-$lang_url = "";
-if($lang->id != 2) {
-    $lang_url = '/'.$lang->url;
-}
-
-/* @var $lang_url string */
-?>
-
 <div id="footer">
     <div class="inside_footer">
         <div class="container-fluid">
             <div class="row footer_content">
-                <div class="">
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer_block first_footer">
-                        <div class="logo">
-                            <a href="/">
-                                <img class="img-responsive" src="/images/logo.png" alt="Главная">
-                            </a>
-                        </div>
+                <div class="col-xs-6 col-sm-6 col-md-4 footer_block first_footer">
+                    <div class="logo">
+                        <a href="/">
+                            <img class="img-responsive" src="/images/logo.png" alt="Главная">
+                        </a>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-md-push-6 col-lg-push-6 footer_block third_footer">
-                        <ul class="bottom_menu">
-                            <li><a href="<?= $lang_url.\yii\helpers\Url::to('/site/about')?>"><?= Yii::t('app','About'); ?></a></li>
-                            <li><a href="<?= $lang_url.\yii\helpers\Url::to('/site/contact')?>"><?= Yii::t('app','Contacts'); ?></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-pull-3 col-lg-pull-3 footer_block second_footer">
+                    <div class="block--copy">
                         <p>© <?=Yii::t('app','Татар Иле')?>
-                            <?= date("Y") ?>.
-                            <?=Yii::t('app','All rights reserved')?></p>
+                            <?= date("Y") ?>.</p>
+                        <p><?=Yii::t('app','All rights reserved')?></p>
                         <p><small>
-                            <?=Yii::t('app','Татарское детское издательство')?><br>
-                            info@tdpress.ru,
-                            (843) 518 34 07<br></small>
+                                <?=Yii::t('app','Татарское детское издательство')?><br>
+                                info@tdpress.ru,
+                                (843) 518 34 07<br></small>
                         </p>
-                        <!--LiveInternet logo--><a href="//www.liveinternet.ru/click"
-                                                   target="_blank"><img src="//counter.yadro.ru/logo?44.6"
-                                                                        title="LiveInternet"
-                                                                        alt="" border="0" width="31" height="31"/></a><!--/LiveInternet-->
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-4 col-md-push-4 footer_block third_footer">
+                    <ul class="bottom_menu">
+                        <li><a href="<?=\yii\helpers\Url::to('http://tatarile.tatar')?>"><?= Yii::t('app','Library'); ?></a></li>
+                        <li><a href="<?=\yii\helpers\Url::to('http://chrestomathy.tatarile.tatar')?>"><?= Yii::t('app','Chrestomathy'); ?></a></li>
+                        <li><a href="<?=\yii\helpers\Url::to('/site/about')?>"><?= Yii::t('app','About'); ?></a></li>
+                        <li><a href="<?=\yii\helpers\Url::to('/site/contact')?>"><?= Yii::t('app','Contacts'); ?></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-4 footer_block second_footer">
+                    <div class="view--subscribe">
+                        <form role="form" class="form-subscribe">
+                            <div class="form--groud">
+                                <label for="s-email" class="form--label"><?=Yii::t('app','Подписаться на обновление')?></label>
+                                <input id="s-email" type="text" name="subscribe" value="" placeholder="E-mail" class="form--item">
+                            </div>
+                            <!-- <div class="form-actions">
+                                <button type="submit" class="btn"><?= Yii::t('app','Subscribe'); ?></button>
+                            </div> -->
+                        </form>
                     </div>
                 </div>
             </div>
+            <!--LiveInternet logo--><a href="//www.liveinternet.ru/click"
+                                       target="_blank"><img src="//counter.yadro.ru/logo?44.6"
+                                                            title="LiveInternet"
+                                                            alt="" border="0" width="31" height="31"/></a><!--/LiveInternet-->
         </div>
     </div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-        try {
-        w.yaCounter45422304 = new Ya.Metrika({
-        id:45422304,
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-        });
-        } catch(e) { }
-        });
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter45422304 = new Ya.Metrika({
+                        id:45422304,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
 
-        var n = d.getElementsByTagName("script")[0],
-        s = d.createElement("script"),
-        f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
 
-        if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
         })(document, window, "yandex_metrika_callbacks");
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/45422304" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
