@@ -14,7 +14,7 @@ else
                 </div>
                 <div class="text-center book_read_block">
 <!--                    --><?php //if ($showHide) :?>
-                        <a href="#book-modal" class="btn book_read_btn"><?=Yii::t('app','Book read')?></a>
+                        <a class="btn book_read_btn"><?=Yii::t('app','Book read')?></a>
 <!--                    --><?php //endif; ?>
                 </div>
             </div>
@@ -90,6 +90,7 @@ else
             overlayClose: true,
             closeOnEscape: true,
             overlay: true,
+            history: false,
             transitionIn: 'fadeIn',
             transitionOut: 'fadeOut',
             transitionInOverlay: 'fadeIn',
