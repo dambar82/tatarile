@@ -25,7 +25,7 @@ foreach ($items as $item)
 
 <aside class="main-sidebar">
     <section class="sidebar">
-		<ul class="sidebar-menu">
+		<ul class="sidebar-menu tree" data-widget='tree'>
 			<li class="header"><span><?echo Yii::t('app', 'Backend menu');?></span></li>
 			<?php
 			foreach ($menu as $menu_item)
@@ -33,7 +33,7 @@ foreach ($items as $item)
 				echo $menu_item['title'];
 				if (!empty($menu_item['menu']))
 				{
-					echo "<ul class='treeview-menu menu-open' style='display: none;'>";
+					echo "<ul class='menu-open' style='display: none;'>";
 					foreach ($menu_item['menu'] as $submenu)
 					{
 						echo $submenu;
