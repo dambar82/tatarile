@@ -4,14 +4,14 @@ $fTrebuchet: "Trebuchet MS";
 ------------------------*/
 .pre-header {
     background: #e5e5e5;
-    padding-top: 20px;
+    padding-bottom: 20px;
 
     .content {
         position: relative;
     }
     .block--lang {
         position: absolute;
-        bottom: 0;
+        top: 0;
         right: -260px;
     }
 
@@ -25,6 +25,7 @@ $fTrebuchet: "Trebuchet MS";
 
 .block--dop-links {
     float: right;
+    margin-top: 8px;
 }
 
 .dop-links {
@@ -49,7 +50,7 @@ $fTrebuchet: "Trebuchet MS";
             width: 70px;
             display: inline-block;
             text-transform: uppercase;
-            padding: 4px;
+            padding: 12px 4px 2px;
             text-align: center;
             font-weight: 600;
             font-size: 15px;
@@ -191,6 +192,7 @@ ul.main-menu {
     @media all and (max-width: 1749px) {
         .block--logo {
             position: initial;
+            margin-top: 15px;
         }
         .block--main-menu {
             width: auto;

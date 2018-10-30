@@ -2014,11 +2014,6 @@ h2,
         background: #9cf9c9;
     }
 }
-@media all and (min-width: 300px) and (max-width: 1600px) {
-    .left-sidebar .sidebar-content {
-        padding: 40px 0;
-    }
-}
 @media all and (min-width: 1415px) and (max-width: 1460px) {
     .left-sidebar .filter_field .field_items select {
         font-size: 17px;
@@ -2399,6 +2394,9 @@ h2,
 .entity_view .entity_razdel,
 .entity_style .entity_razdel {
     text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .entity_view .entity_razdel span,
 .entity_style .entity_razdel span {
@@ -2406,8 +2404,6 @@ h2,
     font-size: 13px;
     display: inline-block;
     padding: 6px 10px;
-    white-space: nowrap;
-    overflow: hidden;
 }
 .entity_view .entity_img,
 .entity_style .entity_img {
@@ -2441,34 +2437,58 @@ h2,
 .entity_view .entity_annotation {
     display: none;
 }
-.view_table .entity_view .views_row {
-    width: 100%;
-}
-.view_table .entity_view .views_row {
-    margin: 30px 0 0;
-}
-.view_table .entity_view .views_row_content {
-    display: inline-block;
-    width: 100%;
-    border: 0;
-    padding-top: 20px;
-    position: relative;
-    z-index: 2;
-}
-.view_table .entity_view .entity_img {
-    display: none;
-}
-.view_table .entity_view .entity_title {
-    height: auto;
-    text-align: left;
-}
-.view_table .entity_view .entity_title .field_content {
-    padding: 0;
-}
-.view_table .entity_view .entity_annotation {
-    display: block;
-    padding: 15px;
-    overflow: hidden;
+.view_table .entity_view {
+    .views_row_inside {
+        border-top-width: 0px;
+        max-width: 880px;
+        margin: auto;
+    }
+    .views_row {
+        width: 100%;
+        margin: 30px 0 0;
+    }
+    .views_row_content {
+        display: inline-block;
+        width: 100%;
+        border: 0;
+        position: relative;
+        z-index: 2;
+    }
+    .entity_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 122px;
+    }
+    .entity_title {
+        text-align: left;
+        display: table;
+        width: 100%;
+        height: 100px;
+        padding-left: 140px;
+        padding-right: 200px;
+
+        .field_content {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0;
+        }
+    }
+    .entity_razdel {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 150px;
+        text-align: left;
+    }
+    .entity_type {
+        left: auto;
+        right: 160px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 3px;
+    }
 }
 
 .entity_view .load_more {
