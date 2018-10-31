@@ -70,6 +70,10 @@ body {
     overflow: hidden;
 }
 
+* {
+    outline: none;
+}
+
 .rslides {
     position: relative;
     list-style: none;
@@ -383,6 +387,55 @@ h2 {
     .entity--text-footer {
         color: #676767;
         font-size: 20px;
+    }
+}
+
+.view--entity .owl-carousel {
+    padding: 0 30px;
+
+    .owl-stage-outer {
+        padding: 15px 0;
+        overflow: visible;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            width: 1000%;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        &::before {
+            right: 100%;
+        }
+        &::after {
+            left: 100%;
+        }
+    }
+}
+.owl-carousel {
+    .owl-item {
+        padding: 20px;
+    }
+    .owl-nav {
+        button.owl-prev,
+        button.owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 34px;
+            height: 60px;
+        }
+        button.owl-prev {
+            background: url("/images/owl-nav-prev-2.png") no-repeat 50% / contain;
+            left: 0;
+        }
+        button.owl-next {
+            background: url("/images/owl-nav-next-2.png") no-repeat 50% / contain;
+            right: 0;
+        }
     }
 }
 

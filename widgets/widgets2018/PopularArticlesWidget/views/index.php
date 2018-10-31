@@ -13,9 +13,9 @@ if($lang->id != 2) {
         <div class="container-fluid">
             <div class="view--entity">
                 <h2><?= Yii::t('app','ПОПУЛЯРНЫЕ СТАТЬИ'); ?></h2>
-                <div class="view--content row">
+                <div class="view--content owl-carousel">
                     <?php foreach ($entities as $entity): ?>
-                        <div class="col-xs-4 col-sm-4 col-md-4 view--row">
+                        <div class="view--row">
                             <div class="row--content">
                                 <div class="content--wrap">
                                     <div class="entity--type">
@@ -45,4 +45,27 @@ if($lang->id != 2) {
             </div>
         </div>
     </div>
+
+<?php
+$script = <<< JS
+    $(".owl-carousel").owlCarousel({
+        loop:true,
+        nav: true,
+        navText: ["", ""],
+        dots: false,
+        responsive : {
+            0 : {
+                items: 1
+            },
+            800 : {
+                items: 2
+            },
+            1399 : {
+                items: 3
+            }
+        }
+    });
+JS;
+$this->registerJs($script, yii\web\View::POS_END);
+?>
 <?php endif; ?>

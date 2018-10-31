@@ -18,6 +18,8 @@ class Theme2018Asset extends AssetBundle
         'css/slick.css',
         'js/noUiSlider/nouislider.css',
         'css/jquery-ui-autocomplete.min.css',
+        'js/owlCarousel/owl.carousel.min.css',
+        'js/owlCarousel/owl.theme.default.css',
         'css/site2018.css',
         'css/header.css',
         'css/footer.css'
@@ -29,6 +31,7 @@ class Theme2018Asset extends AssetBundle
         'js/jquery-ui-autocomplete.min.js',
         'js/scrolltopcontrol.js',
         'js/classie.js',
+        'js/owlCarousel/owl.carousel.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
