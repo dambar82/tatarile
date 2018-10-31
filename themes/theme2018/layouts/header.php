@@ -37,7 +37,7 @@ if($lang->id != 2) {
         <div class="content row">
             <div class="block--logo col-xs-12">
                 <div class="logo">
-                    <a href="/">
+                    <a href="<?= $lang_url ?>/">
                         <img class="img-responsive" src="/images/logo-18.png" alt="Главная">
                     </a>
                 </div>
@@ -45,7 +45,7 @@ if($lang->id != 2) {
             <div class="block--main-menu col-xs-12">
                 <ul class="nav nav-pills main-menu">
                     <li <?= (isset(Yii::$app->params['activ'])) ? 'class="active"' : '' ?>>
-                        <a href="/encyclopedia?category_id=2"><small><?= Yii::t('app','ШКОЛЬНАЯ ЭЛЕКТРОННАЯ'); ?></small><?= Yii::t('app','Library'); ?></a>
+                        <a href=<?=$lang_url ?>"/encyclopedia?category_id=2"><small><?= Yii::t('app','ШКОЛЬНАЯ ЭЛЕКТРОННАЯ'); ?></small><?= Yii::t('app','Library'); ?></a>
                     </li>
                     <li>
                         <a href="http://chrestomathy.tatarile.tatar/info"><small>ӘДӘБИ УКУ БУЕНЧА ЭЛЕКТРОН</small>ХРЕСТОМАТИЯ</a>
