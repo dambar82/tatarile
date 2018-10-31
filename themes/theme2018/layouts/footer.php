@@ -45,12 +45,12 @@ if($lang->id != 2) {
                     <div class="view--subscribe">
                         <form role="form" class="form-subscribe">
                             <div class="form--groud">
-                                <label for="s-email" class="form--label"><?=Yii::t('app','Подписаться на обновление')?></label>
-                                <input id="s-email" type="text" name="subscribe" value="" placeholder="E-mail" class="form--item">
+                                <label for="s-email" class="form--label"><?=Yii::t('app','Получать периодическую рассылку об обновлении сайта')?></label>
+                                <input id="s-email" type="text" name="subscribe" value="" placeholder="Ваша электронная почта" class="form--item">
                             </div>
-                            <!-- <div class="form-actions">
-                                <button type="submit" class="btn"><?= Yii::t('app','Subscribe'); ?></button>
-                            </div> -->
+                            <div class="form-actions">
+                                <button type="submit" class="btn form--submit"><?= Yii::t('app','Subscribe'); ?></button>
+                            </div>
                         </form>
                     </div>
                 </div>

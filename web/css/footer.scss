@@ -27,23 +27,32 @@ $fTrebuchet: "Trebuchet MS";
     margin-top: 20px;
 
     .form--label {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 400;
         font-family: $fTrebuchet;
+        margin-bottom: 10px;
     }
     .form--item {
         width: 100%;
-        border: 2px solid #cccccc;
-        text-align: center;
-        font-size: 18px;
+        border: none;
+        font-size: 20px;
         color: #b2b2b2;
         padding: 6px 15px;
+        border-radius: 5px;
+        font-family: $fTrebuchet;
+    }
+    .form--submit {
+        background: #aec1d4;
+        border: 1px solid #6a7b8b;
+        width: 100%;
+        color: #3a4b5c;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-family: $fTrebuchet;
     }
 }
 
-.second_footer {
-    text-align: center;
-}
 .third_footer {
     text-align: right;
 }
@@ -58,5 +67,38 @@ $fTrebuchet: "Trebuchet MS";
         color: #ffffff;
         font-size: 20px;
         font-family: $fTrebuchet;
+    }
+}
+
+.block--subscribed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 100%;
+    max-width: 1100px;
+    border: 3px solid #787878;
+    padding: 100px 25px 25px;
+    text-align: center;
+
+    .subscribed--logo {
+        display: inline-block;
+    }
+    .subscribed--close {
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .subscribed--text {
+        color: #4b4b4b;
+        font-size: 50px;
+        font-family: $fTrebuchet;
+        margin: 80px 0 50px;
+    }
+    .subscribed--ok {
+        color: #039b91;
+        font-size: 120px;
     }
 }

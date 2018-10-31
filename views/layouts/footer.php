@@ -48,9 +48,9 @@ if($lang->id != 2) {
                                 <label for="s-email" class="form--label"><?=Yii::t('app','Подписаться на обновление')?></label>
                                 <input id="s-email" type="text" name="subscribe" value="" placeholder="E-mail" class="form--item">
                             </div>
-                            <!-- <div class="form-actions">
+                            <div class="form-actions">
                                 <button type="submit" class="btn"><?= Yii::t('app','Subscribe'); ?></button>
-                            </div> -->
+                            </div>
                         </form>
                     </div>
                 </div>
