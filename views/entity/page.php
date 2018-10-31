@@ -75,7 +75,9 @@ Yii::$app->params['activ'] = '1';
                                     <div class="col-xs-4 soc_widgets_btn add_favorite">
                                         <div class="soc_widgets_row_cont my-tbl">
                                             <div class="my-tbl-cell">
-                                                <a href="javascript://" class="btn js_add_favorite <?=$favorite_active?>" data-id="<?=$model->id?>">В избранное</a>
+                                                <a href="javascript://" class="btn js_add_favorite <?=$favorite_active?>" data-id="<?=$model->id?>">
+                                                    <?= Yii::t('app','В избранное')?>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -92,7 +94,7 @@ Yii::$app->params['activ'] = '1';
                                     <div class="col-xs-4 soc_widgets_btn btn_print">
                                         <div class="soc_widgets_row_cont my-tbl">
                                             <div class="my-tbl-cell">
-                                                <a href="#" class="btn" onclick="print()">Печать</a>
+                                                <a href="#" class="btn" onclick="print()"><?= Yii::t('app','Печать')?></a>
                                             </div>
                                         </div>
                                     </div>
