@@ -24,7 +24,7 @@ if($lang->id != 2) {
         <div class="block--see-chrestom">
             <div class="chrestom--text">
                 <div class="chrestom--title">
-                    <small>ӘДӘБИ УКУ БУЕНЧА ЭЛЕКТОН</small>ХРЕСТОМАТИЯ
+                    <small>ӘДӘБИ УКУ БУЕНЧА ЭЛЕКТРОН</small>ХРЕСТОМАТИЯ
                 </div>
                 <div class="chrestom--descr">
                     <p><?= Yii::t('app','Для начальных классов общеобразовательных школ с обучением на татарском языке'); ?></p>
