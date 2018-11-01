@@ -3276,6 +3276,19 @@ h2,
     }
 }
 
+/*  basic-page
+------------------------*/
+.basic-page {
+    background: url("/images/enciclopedy_bg.png") #ecece6;
+    padding-bottom: 20px;
+
+    .basic-page--content {
+        background: #fff;
+        font-size: 18px;
+        padding: 4%;
+    }
+}
+
 /*  Footer
 ------------------------*/
 .height100 {
@@ -3833,7 +3846,7 @@ h2,
 
     &::before,
     &::after {
-    content: "";
+        content: "";
         position: absolute;
         top: 0;
         height: 100%;

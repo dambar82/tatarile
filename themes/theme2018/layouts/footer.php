@@ -53,16 +53,18 @@ if($lang->id != 2) {
                         <li><a href="<?=\yii\helpers\Url::to('http://chrestomathy.tatarile.tatar')?>"><?= Yii::t('app','Chrestomathy'); ?></a></li>
                         <li><a href="<?=$lang_url.\yii\helpers\Url::to('/site/about')?>"><?= Yii::t('app','About'); ?></a></li>
                         <li><a href="<?=$lang_url.\yii\helpers\Url::to('/site/contact')?>"><?= Yii::t('app','Contacts'); ?></a></li>
+                        <div style="margin-top: 5px;">
+                            <!--LiveInternet logo--><a href="//www.liveinternet.ru/click"
+                            target="_blank"><img src="//counter.yadro.ru/logo?44.6"
+                                                                    title="LiveInternet"
+                                                                    alt="" border="0" width="31" height="31"/></a><!--/LiveInternet-->
+                        </div>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-4 footer_block second_footer">
                     <?= \app\widgets\widgets2018\SubscribeWidget\SubscribeWidget::widget([]) ?>
                 </div>
             </div>
-            <!--LiveInternet logo--><a href="//www.liveinternet.ru/click"
-                                       target="_blank"><img src="//counter.yadro.ru/logo?44.6"
-                                                            title="LiveInternet"
-                                                            alt="" border="0" width="31" height="31"/></a><!--/LiveInternet-->
         </div>
     </div>
     <!-- Yandex.Metrika counter -->
