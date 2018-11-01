@@ -52,32 +52,6 @@ if(!$pagination) {
                     </div>
                     <?php endif?>
 
-                        <?php
-                    if(count($entity_types) > 1) {
-                        ?>
-                        <div class="filter_field filter_type">
-                            <div class="filter_white_round"></div>
-                            <div class="filter_theme_round"></div>
-                            <div class="filter_title"><label for="filter_type"><?=Yii::t('app','Content type')?></label></div>
-                            <div class="field_items">
-                                <?php
-                                foreach ($entity_types as $entity_type) {
-                                    ?>
-                                    <div class="field_item checkbox checkbox_<?= $entity_type->entity_type ?>">
-                                        <label>
-                                            <input type="checkbox" id="type-<?= $entity_type->id ?>"
-                                                   name="entity_type[<?= $entity_type->id ?>]"
-                                                   value="1" <?php if (isset($selected_types[$entity_type->id])) echo 'checked'; ?>>
-                                            <span><?= Yii::t('app', $entity_type->entity_type) ?></span></label>
-                                    </div>
-                                    <?php
-                                }
-                                ?>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                    ?>
                 </div>
             </form>
             <div class="hidden-xs hidden-sm hidden-lg right-sidebar">
