@@ -25,7 +25,7 @@ $this->title = Yii::t('app','About the project title');
                     <p><?=Yii::t('app','School electronic library')?> <?=Yii::t('app','About the project footer2')?>
                     </p>
                     <?=Yii::t('app','About the project')?>
-                    <p><?=Yii::t('app','Partners')?>:</p>
+                    <p class="text-center"><strong><?=Yii::t('app','Partners')?></strong></p>
                     <ul>
                         <?php
                         $partners_list = Yii::t('app','Partners list');
