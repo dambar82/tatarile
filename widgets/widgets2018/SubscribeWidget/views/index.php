@@ -34,6 +34,7 @@ $script = <<< JS
             data: data,
             success: function(res){
                 $('.block--subscribed').removeClass('hidden');
+                $('#subscribeemail-email').val('');
             }
       });
       return false;
