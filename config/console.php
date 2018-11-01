@@ -32,7 +32,7 @@ $config = [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.yandex.ru',
                 'username' => $params['adminEmail'],
-                'password' => '1982@cvlbcv',
+                'password' => '19821982@sd',
                 'port' => '587',
                 'encryption' => 'tls',
             ],
