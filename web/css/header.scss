@@ -178,6 +178,9 @@ ul.main-menu {
                 background: linear-gradient(to right, rgba(0, 173, 147, 1) 0%, rgba(0, 173, 89, 1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ad93', endColorstr='#00ad59', GradientType=1 );
             }
+            &:hover {
+                color: #4d5257;
+            }
         }
         &:nth-child(even) {
             a::before {
