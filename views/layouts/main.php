@@ -40,7 +40,7 @@ rmrevin\yii\fontawesome\AssetBundle::register($this);
         <?= $content ?>
 
     </div>
-    <?= $this->render('footer'); ?>
+    <?= $this->render('@app/themes/theme2018/layouts/footer'); ?>
 </div>
 <?= $this->render('@app/views/site/iziForm'); ?>
 

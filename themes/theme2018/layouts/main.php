@@ -28,20 +28,7 @@ use yii\helpers\Html;
 
     <?= $this->render('footer'); ?>
 </div>
-<div class="block--subscribed hidden">
-    <a class="subscribed--close" href="javascript:;" onclick="$('.block--subscribed').addClass('hidden')">
-        <img src="/images/subscribed-close.png" alt="" class="img-responsive">
-    </a>
-    <div class="subscribed--logo">
-        <img src="/images/subscribed-logo.png" alt="" class="img-responsive">
-    </div>
-    <div class="subscribed--text">
-        <span>Подписка оформлена</span>
-    </div>
-    <div class="subscribed--ok">
-        <i class="glyphicon glyphicon-ok"></i>
-    </div>
-</div>
+
 <?php
 $script = <<< JS
     $('.view--rotator').responsiveSlides({

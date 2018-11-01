@@ -9,6 +9,10 @@ $config = [
     'id' => 'basic-console',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'aliases' => [
+        '@webroot' => dirname(dirname(__FILE__)) . '/web',
+        '@web' => '/web',
+    ],
 	'modules'=>[
 		'user-management' => [
 			'class' => 'webvimark\modules\UserManagement\UserManagementModule',
@@ -17,6 +21,22 @@ $config = [
 	],
     'controllerNamespace' => 'app\commands',
     'components' => [
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => false,
+            'messageConfig' => [
+                'charset' => 'UTF-8',
+                'from' => [$params['adminEmail'] => $params['adminName']],
+            ],
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.yandex.ru',
+                'username' => $params['adminEmail'],
+                'password' => '1982@cvlbcv',
+                'port' => '587',
+                'encryption' => 'tls',
+            ],
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -27,6 +47,31 @@ $config = [
                     'levels' => ['error', 'warning'],
                 ],
             ],
+        ],
+        'urlManager' => [
+            'baseUrl' => '',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules'=>[
+                'login' => 'user-management/auth/login',
+                'register' => 'user-management/auth/registration',
+                'logout' => 'user-management/auth/logout',
+                'robots.txt' => 'site/robots',
+                ['pattern' => 'robots', 'route' => 'site/robots', 'suffix' => '.txt'],
+
+                'entity/product' => 'site/error',
+                'entity/category' => 'site/error',
+
+                [
+                    'class'=>'app\components\EntityEncUrlManager'
+                ],
+                [
+                    'class'=>'app\components\CategoryUrlManager'
+                ],
+
+                '<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
+            ],
+            'class'=>'app\components\LangUrlManager',
         ],
         'db' => $db,
     ],

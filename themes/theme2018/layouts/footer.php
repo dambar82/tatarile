@@ -11,6 +11,20 @@ if($lang->id != 2) {
     $lang_url = '/'.$lang->url;
 }
 ?>
+<div class="block--subscribed hidden">
+    <a class="subscribed--close" href="javascript:;" onclick="$('.block--subscribed').addClass('hidden')">
+        <img src="/images/subscribed-close.png" alt="" class="img-responsive">
+    </a>
+    <div class="subscribed--logo">
+        <img src="/images/subscribed-logo.png" alt="" class="img-responsive">
+    </div>
+    <div class="subscribed--text">
+        <span>Подписка оформлена</span>
+    </div>
+    <div class="subscribed--ok">
+        <i class="glyphicon glyphicon-ok"></i>
+    </div>
+</div>
 
 <div id="footer">
     <div class="inside_footer">
@@ -42,17 +56,7 @@ if($lang->id != 2) {
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-4 footer_block second_footer">
-                    <div class="view--subscribe">
-                        <form role="form" class="form-subscribe">
-                            <div class="form--groud">
-                                <label for="s-email" class="form--label"><?=Yii::t('app','Получать периодическую рассылку об обновлении сайта')?></label>
-                                <input id="s-email" type="text" name="subscribe" value="" placeholder="Ваша электронная почта" class="form--item">
-                            </div>
-                            <div class="form-actions">
-                                <button type="submit" class="btn form--submit"><?= Yii::t('app','Subscribe'); ?></button>
-                            </div>
-                        </form>
-                    </div>
+                    <?= \app\widgets\widgets2018\SubscribeWidget\SubscribeWidget::widget([]) ?>
                 </div>
             </div>
             <!--LiveInternet logo--><a href="//www.liveinternet.ru/click"
