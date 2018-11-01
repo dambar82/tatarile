@@ -14,7 +14,7 @@ class m181031_114858_create_subscribe_email_table extends Migration
     {
         $this->createTable('subscribe_email', [
             'id' => $this->primaryKey(),
-            'email' => $this->string()->notNull()->unique()->comment('Комментарий')
+            'email' => $this->string()->notNull()->comment('Комментарий')
         ]);
     }
 
