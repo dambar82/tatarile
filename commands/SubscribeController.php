@@ -55,6 +55,7 @@ class SubscribeController extends Controller
         }
 
         $mailer->sendMultiple($messages);
+        $subscribeText->delete();
     }
 
 }
