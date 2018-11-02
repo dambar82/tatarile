@@ -3286,8 +3286,19 @@ h2,
 /*  basic-page
 ------------------------*/
 .basic-page {
-    background: url("/images/enciclopedy_bg.png") #ecece6;
+    
     padding-bottom: 20px;
+
+    &::before {
+        content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("/images/enciclopedy_bg.png") #ecece6;
+    z-index: -1;
+    }
 
     .basic-page--content {
         background: #fff;
@@ -3307,10 +3318,21 @@ h2,
         height: 100%;
     }
     .content_body {
-        background: #ecece6;
         min-height: 100%;
         padding-bottom: 235px;
         overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ecece6;
+            z-index: -1;
+        }
     }
     #footer {
         margin-top: -235px;
