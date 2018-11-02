@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $email
+ * @property string $hash
  */
 class SubscribeEmail extends \yii\db\ActiveRecord
 {
@@ -28,6 +29,7 @@ class SubscribeEmail extends \yii\db\ActiveRecord
         return [
             [['email'], 'required'],
             [['email'], 'email'],
+            [['hash'], 'string'],
             [['email'], 'unique'],
         ];
     }
