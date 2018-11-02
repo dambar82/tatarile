@@ -178,7 +178,7 @@
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
                                                             <td align="center" style="Margin:0;padding-left:5px;padding-right:5px;padding-top:10px;padding-bottom:15px;">
-                                                                <a href="<?= $model[3]->href ?>" target="_blank" style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:120%;color:#333333;text-decoration: none;">
+                                                                <a href="<?= $model[3]->href ?>" target="_blank" style="height: 54px;overflow: hidden;display: inline-block;Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:120%;color:#333333;text-decoration: none;">
                                                                     <?= $model[3]->title ?>
                                                                 </a>
                                                             </td>
@@ -209,7 +209,7 @@
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
                                                             <td align="center" style="Margin:0;padding-left:5px;padding-right:5px;padding-top:10px;padding-bottom:15px;">
-                                                                <a href="<?= $model[4]->href ?>" target="_blank" style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:120%;color:#333333;text-decoration: none;">
+                                                                <a href="<?= $model[4]->href ?>" target="_blank" style="height: 54px;overflow: hidden;display: inline-block;Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:120%;color:#333333;text-decoration: none;">
                                                                     <?= $model[4]->title ?>
                                                                 </a>
                                                             </td>
@@ -239,7 +239,7 @@
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
                                                             <td align="center" style="Margin:0;padding-left:5px;padding-right:5px;padding-top:10px;padding-bottom:15px;">
-                                                                <a href="<?= $model[5]->href ?>" target="_blank" style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:120%;color:#333333;text-decoration: none;">
+                                                                <a href="<?= $model[5]->href ?>" target="_blank" style="height: 54px;overflow: hidden;display: inline-block;Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:120%;color:#333333;text-decoration: none;">
                                                                     <?= $model[5]->title ?>
                                                                 </a>
                                                             </td>
