@@ -33,9 +33,13 @@ class SubscribeController extends Controller
         $request = Yii::$app->request;
         $hash = HtmlPurifier::process($request->get('hash'));
 
-        SubscribeEmail::deleteAll(['hash' => $hash]);
+        if (($subscribe = SubscribeEmail::findOne(['hash' => $hash])) != null) {
+            $subscribe->delete();
 
-        return 'Вы отписались от рассылки';
+            return $this->render('unsubscribe');
+        }
+
+        throw new NotFoundHttpException();
     }
 
 }

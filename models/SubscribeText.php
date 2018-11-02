@@ -11,6 +11,7 @@ use Yii;
  * @property string $href
  * @property string $title
  * @property string $img
+ * @property string $category
  */
 class SubscribeText extends \yii\db\ActiveRecord
 {
@@ -28,7 +29,7 @@ class SubscribeText extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['href', 'title', 'img'], 'string'],
+            [['href', 'title', 'img', 'category'], 'string'],
         ];
     }
 
