@@ -6,6 +6,8 @@ use app\backend\models\Entity;
 use app\components\UrlHelper;
 use app\models\SubscribeEmail;
 use app\models\SubscribeText;
+use app\modules\file\widgets\Thumbnail;
+use app\modules\file\widgets\Thumbnail3;
 use yii\console\Controller;
 use yii\db\Expression;
 
@@ -21,24 +23,21 @@ class SubscribeController extends Controller
             ->where(['status' => 1])
             ->innerJoinWith(['eav'])
             ->orderBy(new Expression('rand()'))
-            ->limit(10)
+            ->limit(6)
             ->all();
 
-        $str = '';
-
         foreach ($entities as $entity) {
-            $str.= '<a href="http://tatarile.tatar'.UrlHelper::createEntityUrl($entity->id).'">' . $entity->eav->value . '</a><br>';
+            $subscribeText = new SubscribeText();
+            $subscribeText->title = $entity->eav->value;
+            $subscribeText->href = 'http://tatarile.tatar' . UrlHelper::createEntityUrl($entity->id);
+            $subscribeText->img = Thumbnail3::widget(['id' => $entity->id]);
+            $subscribeText->save();
         }
-
-        $subscribeText = new SubscribeText();
-        $subscribeText->text = $str;
-        $subscribeText->save();
-
     }
 
     public function actionSend()
     {
-        $subscribeText = SubscribeText::find()->one();
+        $subscribeText = SubscribeText::find()->all();
 
         $subscribeEmails = SubscribeEmail::find()->all();
 
@@ -46,16 +45,18 @@ class SubscribeController extends Controller
         $messages = [];
 
         foreach ($subscribeEmails as $email) {
-            $messages[] = $mailer->compose()
+
+            $messages[] = $mailer->compose('subscribe', [
+                'model' => $subscribeText,
+                'email' => $email
+            ])
                 ->setFrom([\Yii::$app->params['adminEmail'] => \Yii::$app->params['adminName']])
                 ->setTo($email->email)
-                ->setSubject('Рассылка')
-                ->setHtmlBody($subscribeText->text);
+                ->setSubject('Рассылка');
 
         }
-
+        SubscribeText::deleteAll();
         $mailer->sendMultiple($messages);
-        $subscribeText->delete();
     }
 
 }

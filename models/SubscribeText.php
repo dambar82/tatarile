@@ -8,7 +8,9 @@ use Yii;
  * This is the model class for table "subscribe_text".
  *
  * @property integer $id
- * @property string $text
+ * @property string $href
+ * @property string $title
+ * @property string $img
  */
 class SubscribeText extends \yii\db\ActiveRecord
 {
@@ -26,7 +28,7 @@ class SubscribeText extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['text'], 'string'],
+            [['href', 'title', 'img'], 'string'],
         ];
     }
 
@@ -37,7 +39,7 @@ class SubscribeText extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'text' => Yii::t('app', 'Text'),
+            'title' => Yii::t('app', 'Text'),
         ];
     }
 }

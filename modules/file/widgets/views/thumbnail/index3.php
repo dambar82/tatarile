@@ -1,0 +1,1 @@
+<img class="" src="http://tatarile.tatar<?=$thumbnail?>" alt="">
