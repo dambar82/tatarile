@@ -137,7 +137,14 @@ if (!empty($entities)) {
             </div>
             <div class="row">
                 <div class="entities--section text-center col-xs-12">
-                    <p>Раздел <b>История</b></p>
+                    <p>
+                        <?= Yii::t('app','Раздел'); ?>
+                        <b>
+                            <?php foreach ($parentSubjects as $parentSubjectID => $parentSubjectTitle) : ?>
+                                  <?= ($parentSubjectID == $category_id) ? $parentSubjectTitle : '' ?>
+                            <?php endforeach; ?>
+                        </b>
+                    </p>
                 </div>
             </div>
         <div class="row entity_view">
