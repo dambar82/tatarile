@@ -3,6 +3,7 @@
 namespace app\commands;
 
 use app\backend\models\Entity;
+use app\backend\models\Subject;
 use app\components\UrlHelper;
 use app\models\SubscribeEmail;
 use app\models\SubscribeText;
@@ -26,11 +27,14 @@ class SubscribeController extends Controller
             ->limit(6)
             ->all();
 
+        $parentSubjects = Subject::getAllSubjectsWithLang();
+
         foreach ($entities as $entity) {
             $subscribeText = new SubscribeText();
             $subscribeText->title = $entity->eav->value;
             $subscribeText->href = 'http://tatarile.tatar' . UrlHelper::createEntityUrl($entity->id);
             $subscribeText->img = Thumbnail3::widget(['id' => $entity->id]);
+            $subscribeText->category = (isset($parentSubjects[$entity->category_id])) ? $parentSubjects[$entity->category_id] : '';
             $subscribeText->save();
         }
     }

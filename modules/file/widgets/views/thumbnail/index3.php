@@ -1,1 +1,1 @@
-<img class="" src="http://tatarile.tatar<?=$thumbnail?>" alt="">
+http://tatarile.tatar<?=$thumbnail?>
