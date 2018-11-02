@@ -1,12 +1,18 @@
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = Yii::t('app','About the project title');
 ?>
 <div class="main_block">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-10 col-lg-6 col-md-push-1 col-lg-push-3">
+            <div class="col-md-1 col-lg-3 do-not-print">
+                <div class="btn_prev_page">
+                    <a class="btn" href="<?=Url::to(Yii::$app->request->referrer)?>"><?=Yii::t('app','back')?></a>
+                </div>
+            </div>
+            <div class="col-md-10 col-lg-6">
                 <div class="entity_subject">
                     <span><?=Yii::t('app','About')?></span>
                 </div>
