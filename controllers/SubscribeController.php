@@ -30,7 +30,6 @@ class SubscribeController extends Controller
 
     public function actionUnsubscribe()
     {
-        return $this->render('unsubscribe');
         $request = Yii::$app->request;
         $hash = HtmlPurifier::process($request->get('hash'));
 
