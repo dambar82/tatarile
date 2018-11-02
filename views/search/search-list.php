@@ -135,6 +135,11 @@ if (!empty($entities)) {
                     </a>
                 </div>
             </div>
+            <div class="row">
+                <div class="entities--section text-center col-xs-12">
+                    <p>Раздел <b>История</b></p>
+                </div>
+            </div>
         <div class="row entity_view">
     <?php
     }
