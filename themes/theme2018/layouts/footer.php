@@ -19,7 +19,7 @@ if($lang->id != 2) {
         <img src="/images/subscribed-logo.png" alt="" class="img-responsive">
     </div>
     <div class="subscribed--text">
-        <span>Подписка оформлена</span>
+        <span><?=Yii::t('app','Подписка оформлена')?></span>
     </div>
     <div class="subscribed--ok">
         <i class="glyphicon glyphicon-ok"></i>
