@@ -33,29 +33,29 @@ $(document).ready(function(){
         }
     };
     function magicLine() {
-
-        var $el, leftPos, newWidth,
-            $mainNav = $("#modal-form .nav");
-
-
-        var $magicLine = $("#line");
-
-        $magicLine
-            .width($("#modal-form .nav li.active").width())
-            .css("left", $("#modal-form .nav li.active").position().left)
-            .data("origLeft", $magicLine.position().left)
-            .data("origWidth", $magicLine.width());
-
-        $("#modal-form .nav li").click(function() {
-            $el = $(this);
-            leftPos = $el.position().left;
-            newWidth = $el.width();
-            $magicLine.stop().animate({
-                left: leftPos,
-                width: newWidth
-            });
-        });
-    };
+    //
+    //     var $el, leftPos, newWidth,
+    //         $mainNav = $("#modal-form .nav");
+    //
+    //
+    //     var $magicLine = $("#line");
+    //
+    //     $magicLine
+    //         .width($("#modal-form .nav li.active").width())
+    //         .css("left", $("#modal-form .nav li.active").position().left)
+    //         .data("origLeft", $magicLine.position().left)
+    //         .data("origWidth", $magicLine.width());
+    //
+    //     $("#modal-form .nav li").click(function() {
+    //         $el = $(this);
+    //         leftPos = $el.position().left;
+    //         newWidth = $el.width();
+    //         $magicLine.stop().animate({
+    //             left: leftPos,
+    //             width: newWidth
+    //         });
+    //     });
+     };
 
 
 

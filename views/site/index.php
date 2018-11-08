@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = Yii::t('app', 'My Yii Application');
+$this->context->layout = "@app/views/layouts/mainPage";
 ?>
 <div class="site-index">
     <div class="body-content">

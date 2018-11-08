@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\backend\models\EntityTags;
+use app\helpers\ThemeHelper;
 use app\models\Lang;
 use app\modules\admin\models\ConfigSeo;
 use app\modules\statistics\models\AdminActionStatistics;
@@ -14,9 +15,10 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\web\NotFoundHttpException;
 
-class SiteController extends Controller
+class SiteController extends ThemeController
 {
     public $freeAccess = true;
+    public $themeName;
     protected $stat = 1;
 
     public function behaviors()
@@ -27,6 +29,13 @@ class SiteController extends Controller
 			],
 		];
 	}
+
+	public function init()
+    {
+        parent::init();
+        $this->themeName = ThemeHelper::defaultTheme();
+        $this->layout = '@app/themes/'.$this->themeName.'/layouts/main';
+    }
 
     /**
      * @inheritdoc
@@ -51,8 +60,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout = "@app/themes/theme2018/layouts/main";
-        return $this->render('@app/themes/theme2018/views/site/index');
+        $this->layout = "@app/themes/".$this->themeName."/layouts/main";
+        return $this->render('index');
     }
 
 
@@ -84,7 +93,7 @@ class SiteController extends Controller
             }
             catch (Exception $e) {
                 $transaction->rollBack();
-                throw new NotFoundHttpException('Ne poluchilos - ne fartanulo: '.$e->getMessage());
+                throw new NotFoundHttpException(''.$e->getMessage());
             }
             return $this->refresh();
         }

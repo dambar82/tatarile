@@ -83,8 +83,6 @@ $config = [
 		],
         'view' => [
             'theme' => [
-//                'basePath' => '@app/themes/basic',
-//                'baseUrl' => '@web/themes/basic',
                 'pathMap' => [
                     '@app/vendor/webvimark/module-user-management/views/auth' => '@app/views/auth',
                 ],

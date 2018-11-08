@@ -24,7 +24,7 @@ use yii\web\Controller;
 use yii\web\JsonResponseFormatter;
 use yii\web\NotFoundHttpException;
 
-class EntityController extends Controller
+class EntityController extends ThemeController
 {
     public $freeAccess = true;
     public $viewFile = 'index';

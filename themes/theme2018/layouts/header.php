@@ -27,6 +27,19 @@ if($lang->id != 2) {
                     <li>
                         <a href="<?=$lang_url.\yii\helpers\Url::to('/site/contact')?>"><?= Yii::t('app','Contacts'); ?></a>
                     </li>
+                    <li>
+                        <?php if (!Yii::$app->user->isGuest) : ?>
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:void(0)" class="change_theme" data-theme="theme2017">Тема 2017</a></li>
+                                    <li><a href="javascript:void(0)" class="change_theme" data-theme="theme2018">Тема 2018</a></li>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -66,3 +79,23 @@ if($lang->id != 2) {
         </div>
     </div>
 </div>
+
+<?php
+$script = <<< JS
+    $('.change_theme').click(function() {
+      var theme = $(this).attr('data-theme');
+      
+      $.ajax({
+        'data' : {'theme': theme},
+        'dataType' : 'html',
+        'success' : function(data) {
+            window.location.reload();
+        },
+        'type' : 'post',
+        'url' : '/theme/change'
+      });
+      
+    });
+JS;
+$this->registerJs($script, yii\web\View::POS_READY);
+?>

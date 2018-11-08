@@ -11,6 +11,8 @@ $lang_url = "";
 if($lang->id != 2) {
     $lang_url = '/'.$lang->url;
 }
+
+$this->context->layout = "@app/themes/theme2018/layouts/mainPage";
 ?>
 
 <?= $this->render('__rotator', [

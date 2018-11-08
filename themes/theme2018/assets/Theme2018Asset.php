@@ -31,7 +31,7 @@ class Theme2018Asset extends AssetBundle
         'js/jquery-ui-autocomplete.min.js',
         'js/scrolltopcontrol.js',
         'js/classie.js',
-        'js/owlCarousel/owl.carousel.min.js',
+        'js/owlCarousel/owl.carousel.min.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

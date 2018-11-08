@@ -7,15 +7,28 @@ use app\backend\models\EntityTags;
 use app\backend\models\EntityType;
 use app\backend\models\Subject;
 use app\components\Helper;
+use app\helpers\ThemeHelper;
 use app\models\Lang;
 use Yii;
 use yii\helpers\Url;
+use yii\helpers\VarDumper;
 use yii\web\BadRequestHttpException;
 
-class SearchController extends \yii\web\Controller
+class SearchController extends ThemeController
 {
+    public $themeName;
+
+    public function init()
+    {
+        parent::init();
+        $this->themeName = ThemeHelper::defaultTheme();
+        $this->layout = '@app/themes/'.$this->themeName.'/layouts/main';
+    }
+
     public function actionIndex($type = NULL)
     {
+//        VarDumper::dump(\Yii::$app->getView()->theme, 5, true);
+//        exit();
         Url::remember();
         $request = Yii::$app->request;
         $offset = 0;
