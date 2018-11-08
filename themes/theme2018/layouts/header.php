@@ -27,22 +27,26 @@ if($lang->id != 2) {
                     <li>
                         <a href="<?=$lang_url.\yii\helpers\Url::to('/site/contact')?>"><?= Yii::t('app','Contacts'); ?></a>
                     </li>
-                    <li>
-                        <?php if (!Yii::$app->user->isGuest) : ?>
-                            <div class="dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)" class="change_theme" data-theme="theme2017">Тема 2017</a></li>
-                                    <li><a href="javascript:void(0)" class="change_theme" data-theme="theme2018">Тема 2018</a></li>
-                                </ul>
-                            </div>
-                        <?php endif; ?>
-                    </li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="block--dop-links" style="position: absolute; right: 50px; top:0;">
+        <ul class="nav nav-pills dop-links">
+            <li>
+                <?php if (!Yii::$app->user->isGuest) : ?>
+                    <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)" class="change_theme" data-theme="theme2017">Тема 2017</a></li>
+                            <li><a href="javascript:void(0)" class="change_theme" data-theme="theme2018">Тема 2018</a></li>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            </li>
+        </ul>
     </div>
 </div>
 <div class="header header-encyclop">
