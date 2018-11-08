@@ -12,6 +12,7 @@ use app\backend\models\EntityTags;
 use app\backend\models\VideoContent;
 use app\components\GetEntity;
 use app\components\UrlHelper;
+use app\helpers\ThemeHelper;
 use app\models\Lang;
 use app\modules\admin\models\PdfContent;
 use app\modules\user\models\UserFavorite;
@@ -28,6 +29,14 @@ class EntityController extends ThemeController
 {
     public $freeAccess = true;
     public $viewFile = 'index';
+    public $themeName;
+
+    public function init()
+    {
+        parent::init();
+        $this->themeName = ThemeHelper::defaultTheme();
+        $this->layout = '@app/themes/'.$this->themeName.'/layouts/main';
+    }
 
     public function actionProduct($id)
     {
