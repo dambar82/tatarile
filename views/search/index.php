@@ -107,6 +107,9 @@ $script = <<< JS
     
     function deleteCharFilter() {
         $('#alphabet-filter input[type="checkbox"]').attr('checked',null);
+        $('#TriSeaDefault').attr('checked', false);
+        $('#filter-date').addClass('ignored');
+        $('#fav-content-checker').attr('checked', false);
     }
     
     function serializeAllFilters() {
@@ -296,7 +299,7 @@ $script = <<< JS
             }
             sendFilter();
         });
-        searchPageDyn.on('change','#TriSeaDefault',function() {
+        searchPageDyn.on('change','#TriSeaDefault', function() {
             var filterDate = $('#filter-date');
             if($(this).prop('checked'))
                 filterDate.removeClass('ignored');
