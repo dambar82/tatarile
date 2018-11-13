@@ -104,6 +104,11 @@ $script = <<< JS
         r[i] = value;
         slider.noUiSlider.set(r);
     }
+    
+    function deleteCharFilter() {
+        $('#alphabet-filter input[type="checkbox"]').attr('checked',null);
+    }
+    
     function serializeAllFilters() {
         var filterSerialize = "";
         var filters = $('.filter-serializer').not('.ignored');
@@ -115,6 +120,7 @@ $script = <<< JS
                    filterSerialize +='&';
                filterSerialize += ser;
             }
+            
             var qf = $(this).find('input[name="q"]');
             if(qf.length > 0 && qf.val().trim() != '') {
                 if(filterSerialize.length != 0)
@@ -123,6 +129,7 @@ $script = <<< JS
                 $('#alphabet-filter input[type="checkbox"]').attr('checked',null);
 
             }
+            
             var cf = $(this).find('*[name="category_id"]:checked');
             if(cf.length > 0 && parseInt(cf.val()) > 0) {
                 if(filterSerialize.length != 0)
@@ -130,12 +137,14 @@ $script = <<< JS
                 filterSerialize += 'category_id='+parseInt(cf.val());
             }
         });
+
         var checkedChar = $('#alphabet-filter input:checked');
         if(checkedChar.length > 0) {
             if(filterSerialize.length != 0)
                    filterSerialize +='&';
             filterSerialize += 'char='+encodeURIComponent(checkedChar.attr('data-char'));
         }
+
         return filterSerialize;
     }
     function sendFilter(serialize) {
@@ -268,9 +277,11 @@ $script = <<< JS
                 obj.attr('checked','checked');
             else
                 obj.attr('checked',null);
+            deleteCharFilter();
             sendFilter();
         });
-        filterContainer.on('change','.updater-select input[type="radio"]',function(e) {      
+        filterContainer.on('change','.updater-select input[type="radio"]',function(e) { 
+            deleteCharFilter();
             sendFilter();            
         });
         filterContainer.on('change','#alphabet-filter input[type="checkbox"]',function(e) {
