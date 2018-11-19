@@ -526,7 +526,7 @@ class EntityController extends Controller
                     $model_eav[$property->id][$lang->id]->entity_id = $id;
                     $model_eav[$property->id][$lang->id]->property_id = $property->id;
                     $model_eav[$property->id][$lang->id]->lang_id = $lang->id;
-                    $model_eav[$property->id][$lang->id]->value = isset($temp_eav[$property->id][$lang->id]) ? $temp_eav[$property->id][$lang->id] : '';
+                    $model_eav[$property->id][$lang->id]->value = isset($temp_eav[$property->id][$lang->id]) ? trim($temp_eav[$property->id][$lang->id]) : '';
                 }
             }
         }
