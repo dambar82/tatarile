@@ -138,12 +138,15 @@ if (!empty($entities)) {
             <div class="row">
                 <div class="entities--section text-center col-xs-12">
                     <p>
-                        <?= Yii::t('app','Раздел'); ?>
-                        <b>
-                            <?php foreach ($parentSubjects as $parentSubjectID => $parentSubjectTitle) : ?>
-                                  <?= ($parentSubjectID == $category_id) ? $parentSubjectTitle : '' ?>
-                            <?php endforeach; ?>
-                        </b>
+                        <?php
+                            $sTitle = '';
+                            foreach ($parentSubjects as $parentSubjectID => $parentSubjectTitle) {
+                                if ($parentSubjectID == $category_id) {
+                                    $sTitle = $parentSubjectTitle;
+                                }
+                            }
+                        ?>
+                        <?= Yii::t('app','Раздел {0}', $sTitle); ?>
                     </p>
                 </div>
             </div>
