@@ -146,7 +146,7 @@ if (!empty($entities)) {
                                 }
                             }
                         ?>
-                        <?= Yii::t('app','Раздел {0}', $sTitle); ?>
+                        <?= Yii::t('app','Раздел {0}', '<b>' . $sTitle . '</b>'); ?>
                     </p>
                 </div>
             </div>
