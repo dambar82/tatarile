@@ -17,9 +17,6 @@
             'tags' => [
                 'source' => [
                     ['src' => $content->filename, 'type' => 'video/mp4'],
-                ],
-                'track' => [
-                    ['kind' => 'captions', 'src' => 'http://vjs.zencdn.net/vtt/captions.vtt', 'srclang' => 'en', 'label' => 'English']
                 ]
             ]
         ]);
@@ -38,9 +35,6 @@
                 'tags' => [
                     'source' => [
                         ['src' => $model_eav['url'], 'type' => 'video/mp4'],
-                    ],
-                    'track' => [
-                        ['kind' => 'captions', 'src' => 'http://vjs.zencdn.net/vtt/captions.vtt', 'srclang' => 'en', 'label' => 'English']
                     ]
                 ]
             ]);
