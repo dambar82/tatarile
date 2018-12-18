@@ -29,7 +29,6 @@
         "fxp/composer-asset-plugin": "^1.2.0",
         "wbraganca/yii2-videojs-widget": "~1.0",
         "yiisoft/yii2-imagine": "*",
-        "wbraganca/yii2-selectivity": "*",
         "kartik-v/bootstrap-star-rating": "@dev",
         "philippfrenzel/yii2fullcalendar": "*",
         "alpiiscky/yii2-image-cache": "*",
@@ -45,20 +44,17 @@
     },
     "config": {
         "process-timeout": 1800,
-	"fxp-asset": {
-		"installer-paths": {
-		    "npm-asset-library": "vendor/npm",
-		    "bower-asset-library": "vendor/bower"
-		},
-		"vcs-driver-options": {
-		    "github-no-api": true
-		},
-		"pattern-skip-version": "(-build|-patch)"
-	    }
+        "fxp-asset": {
+            "enabled": false
+        }
     },
     "scripts": {
+        "post-install-cmd": [
+            "yii\\composer\\Installer::postInstall"
+        ],
         "post-create-project-cmd": [
-            "yii\\composer\\Installer::postCreateProject"
+            "yii\\composer\\Installer::postCreateProject",
+            "yii\\composer\\Installer::postInstall"
         ]
     },
     "extra": {
@@ -69,10 +65,18 @@
                     "web/assets": "0777",
                     "yii": "0755"
                 }
-            ],
+            ]
+        },
+        "yii\\composer\\Installer::postInstall": {
             "generateCookieValidationKey": [
                 "config/web.php"
             ]
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }

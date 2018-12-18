@@ -1,14 +1,16 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
-//function x() {
-//    return "dasdasdasd";
-//}
+
 $config = [
     'id' => 'basic',
 	'language'=>'ru-RU',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm'   => '@vendor/npm-asset',
+    ],
 	'modules' => [
 		'admin' => [
             'class' => 'app\modules\admin\Module',
