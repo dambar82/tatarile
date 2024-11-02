@@ -6,7 +6,14 @@ php_value memory_limit 250M
 
 IndexIgnore */*
 
+Options +FollowSymLinks
 RewriteEngine on
+
+Redirect 301 http://tatarile.tatar/ru/encyclopedia /ru/encyclopedia?category_id=2
+Redirect 301 /encyclopedia /ru/encyclopedia?category_id=2
+Redirect 301 http://tatarile.tatar/tt/encyclopedia /tt/encyclopedia?category_id=2
+Redirect 301 http://tatarile.tatar/encyclopedia /ru/encyclopedia?category_id=2
+
 
 RewriteRule ^sitemap.xml$ files/sitemap.xml$1 [L]
 
@@ -16,3 +23,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # otherwise forward it to index.php
 RewriteRule . index.php
+

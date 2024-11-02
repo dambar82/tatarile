@@ -22,6 +22,7 @@
                                 <?=Yii::t('app','Tatarmultfilm')?><br>
                                 info@tdpress.ru,
                                 (843) 518 34 07<br></small>
+								<p> Разработано ООО "Татармультфильм"</p>
                         </p>
                     </div>
                 </div>

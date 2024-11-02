@@ -62,10 +62,10 @@ if($lang->id != 2) {
             <div class="block--main-menu col-xs-12">
                 <ul class="nav nav-pills main-menu">
                     <li <?= (isset(Yii::$app->params['activ'])) ? 'class="active"' : '' ?>>
-                        <a href="<?=$lang_url ?>/encyclopedia?category_id=2"><small><?= Yii::t('app','ШКОЛЬНАЯ ЭЛЕКТРОННАЯ'); ?></small><?= Yii::t('app','Library'); ?></a>
+                        <a rel="canonical" href="<?=$lang_url ?>/encyclopedia?category_id=2"><small><?= Yii::t('app','ШКОЛЬНАЯ ЭЛЕКТРОННАЯ'); ?></small><?= Yii::t('app','Library'); ?></a>
                     </li>
                     <li>
-                        <a href="http://chrestomathy.tatarile.tatar/info"><small>ӘДӘБИ УКУ БУЕНЧА ЭЛЕКТРОН</small>ХРЕСТОМАТИЯ</a>
+                        <a rel="canonical" href="http://chrestomathy.tatarile.tatar/info"><small>ӘДӘБИ УКУ БУЕНЧА ЭЛЕКТРОН</small>ХРЕСТОМАТИЯ</a>
                     </li>
                 </ul>
             </div>

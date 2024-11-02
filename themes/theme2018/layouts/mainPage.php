@@ -15,8 +15,11 @@ use yii\helpers\Html;
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title>Татар Иле - школьная электронная энциклопедия<?= Html::encode($this->title) ?></title>
     <link rel="shortcut icon" href="<?php echo Yii::$app->request->baseUrl; ?>/favicon.ico" type="image/x-icon" />
+	<meta name="robots" content="noyaca"/>
+	<meta name="description" content="Школьная электронная энциклопедия для школьников, их родителей и учителей для изучения истории, культуры и природы Республики Татарстан">
+	<meta name="keywords" content="Республика Татарстан,Татарстан,школьная,электронная энциклопедия,школьная энциклопедия,Всемирный конгресс татар,татары,русские,Национальный музей РТ,культура татарстана ">
     <?php $this->head() ?>
 </head>
 <body class="front">
