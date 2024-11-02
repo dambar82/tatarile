@@ -25,7 +25,14 @@
             }
         }
     }
+
     ?>
+
+    <div class="clearfix"></div>
+    <div class="entity-tags do-not-print">
+        <a target="_blank" href="<?php echo $model_eav['information_source']?>"><?php echo $model_eav['information_source']?></a>
+    </div>
+    </div>
 
     <div class="clearfix"></div>
     <div class="entity-tags do-not-print">
